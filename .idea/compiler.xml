@@ -4,5 +4,13 @@
     <bytecodeTargetLevel>
       <module name="mixjar" target="11" />
     </bytecodeTargetLevel>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mixjar" />
+      </profile>
+    </annotationProcessing>
   </component>
 </project>
