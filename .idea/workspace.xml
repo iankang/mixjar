@@ -5,23 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1972f3f-5662-4c20-ba65-1b43ba360cfb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/Pictures.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/Tags.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/User.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/network/Network.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/utils/CONSTANTS.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/user/Cover_pictures.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/user/Pictures.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/user/UserResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mixjar.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/Pictures.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/show/Pictures.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/show/ShowResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/Tags.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/show/Tags.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/show/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +49,7 @@
     <property name="Repository.Attach.Sources" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/user" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -63,9 +57,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/user" />
       <recent name="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.mixsteroids.mixjar.models.show" />
       <recent name="com.mixsteroids.mixjar.network" />
       <recent name="com.mixsteroids.mixjar.services" />
     </key>

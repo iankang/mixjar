@@ -5,5 +5,6 @@ import com.mixsteroids.mixjar.services.MixCloudServiceImpl
 
 fun main(){
     val mixCloudServiceImpl = MixCloudServiceImpl()
-    mixCloudServiceImpl.getShow("spartacus","party-time")
+//    mixCloudServiceImpl.getShow("spartacus","party-time")
+    mixCloudServiceImpl.getUser("spartacus")
 }

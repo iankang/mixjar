@@ -1,4 +1,4 @@
-package com.mixsteroids.mixjar.models
+package com.mixsteroids.mixjar.models.show
 
 import com.google.gson.annotations.SerializedName
 
