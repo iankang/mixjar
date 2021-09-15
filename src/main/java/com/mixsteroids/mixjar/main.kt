@@ -4,5 +4,6 @@ fun main(){
     val mixCloudServiceImpl = MixCloud()
 //    mixCloudServiceImpl.getShows("spartacus","party-time")
 //    mixCloudServiceImpl.getUsers("DjChief254")
-    mixCloudServiceImpl.getCity("nairobi");
+    mixCloudServiceImpl.getUserCloudCast("DjChief254")
+//    mixCloudServiceImpl.getCity("nairobi");
 }

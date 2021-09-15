@@ -6,6 +6,7 @@ import com.mixsteroids.mixjar.models.tag.CityResponse
 import com.mixsteroids.mixjar.models.tag.TagAndCityResponse
 import com.mixsteroids.mixjar.models.tag.TagResponse
 import com.mixsteroids.mixjar.models.user.UserResponse
+import com.mixsteroids.mixjar.models.userCloudCast.UserCloudCastResponse
 import com.mixsteroids.mixjar.network.Network
 import retrofit2.create
 
@@ -20,6 +21,11 @@ class MixCloudServiceImpl :MixCloudInterface{
     override fun getUser(username:String):UserResponse? {
         val userCall = mixCloudApi.getUser(username)
        return executeRequest(userCall)
+    }
+
+    override fun getUserCloudCasts(username: String): UserCloudCastResponse? {
+        val cloudCastCall = mixCloudApi.getUserCloudCasts(username)
+        return executeRequest(cloudCastCall)
     }
 
     override fun getTag(tag: String): TagResponse? {

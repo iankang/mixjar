@@ -5,6 +5,7 @@ import com.mixsteroids.mixjar.models.tag.CityResponse
 import com.mixsteroids.mixjar.models.tag.TagAndCityResponse
 import com.mixsteroids.mixjar.models.tag.TagResponse
 import com.mixsteroids.mixjar.models.user.UserResponse
+import com.mixsteroids.mixjar.models.userCloudCast.UserCloudCastResponse
 import com.mixsteroids.mixjar.services.MixCloudServiceImpl
 
 class MixCloud {
@@ -16,6 +17,10 @@ class MixCloud {
 
     fun getUsers(username:String): UserResponse? {
         return mixCloudInterface.getUser(username)
+    }
+
+    fun getUserCloudCast(username: String):UserCloudCastResponse?{
+        return mixCloudInterface.getUserCloudCasts(username)
     }
 
     fun getTags(tag:String):TagResponse?{
