@@ -22,24 +22,8 @@ data class UserResponse (
 	@SerializedName("is_premium") val is_premium : Boolean,
 	@SerializedName("city") val city : String,
 	@SerializedName("country") val country : String,
-	@SerializedName("cover_pictures") val cover_pictures : Cover_pictures,
-	@SerializedName("picture_primary_color") val picture_primary_color : String
-){
-	constructor():this("",
-		"",
-		"",
-		"",
-		Pictures(),
-		"",
-		"",
-		"",
-		0,
-		0,
-		0,
-		0,
-		0,
-		false,
-		false,
-		"",
-	"",Cover_pictures(),"")
-}
+	@SerializedName("cover_pictures") val cover_pictures : CoverPictures,
+	@SerializedName("picture_primary_color") val picture_primary_color : Int,
+	@SerializedName("type") val type : String,
+	@SerializedName("metadata") val metadata : Metadata
+)

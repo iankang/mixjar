@@ -12,7 +12,5 @@ data class Pictures (
 	@SerializedName("large") val large : String,
 	@SerializedName("320wx320h") val small320wx320h : String,
 	@SerializedName("extra_large") val extra_large : String,
-	@SerializedName("640wx640h") val small640wx640h : String
-){
-	constructor():this("","","","","","","","")
-}
+	@SerializedName("640wx640h") val medium640wx640h : String
+)

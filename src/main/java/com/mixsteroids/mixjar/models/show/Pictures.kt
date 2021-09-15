@@ -1,6 +1,6 @@
 package com.mixsteroids.mixjar.models.show
-
 import com.google.gson.annotations.SerializedName
+
 
 data class Pictures (
 
@@ -9,9 +9,7 @@ data class Pictures (
 	@SerializedName("medium_mobile") val medium_mobile : String,
 	@SerializedName("medium") val medium : String,
 	@SerializedName("large") val large : String,
-	@SerializedName("320wx320h") val small320 : String,
+	@SerializedName("320wx320h") val small_320 : String,
 	@SerializedName("extra_large") val extra_large : String,
-	@SerializedName("640wx640h") val small640 : String
-){
-	constructor():this("","","","","","","","")
-}
+	@SerializedName("640wx640h") val large_640 : String
+)

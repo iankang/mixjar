@@ -10,7 +10,7 @@ import retrofit2.Response
         override fun onResponse(call: Call<T>, response: Response<T>) {
             if(response.isSuccessful){
                 item = response.body()
-                println(response)
+                println(response.body())
             }
             else{
                 println("Something went wrong with code: ${response.code()}")
