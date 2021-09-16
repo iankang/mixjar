@@ -1,12 +1,8 @@
 package com.mixsteroids.mixjar.services
 
 import com.mixsteroids.mixjar.MixCloudInterface
-import com.mixsteroids.mixjar.models.show.ShowResponse
-import com.mixsteroids.mixjar.models.tag.CityResponse
-import com.mixsteroids.mixjar.models.tag.TagAndCityResponse
-import com.mixsteroids.mixjar.models.tag.TagResponse
-import com.mixsteroids.mixjar.models.user.UserResponse
-import com.mixsteroids.mixjar.models.userCloudCast.UserCloudCastResponse
+import com.mixsteroids.mixjar.models.*
+
 import com.mixsteroids.mixjar.network.Network
 import retrofit2.create
 
@@ -18,7 +14,7 @@ class MixCloudServiceImpl :MixCloudInterface{
          val showCall = mixCloudApi.getShow(entertainer,show)
          return executeRequest(showCall)
      }
-    override fun getUser(username:String):UserResponse? {
+    override fun getUser(username:String): UserResponse? {
         val userCall = mixCloudApi.getUser(username)
        return executeRequest(userCall)
     }
@@ -26,6 +22,41 @@ class MixCloudServiceImpl :MixCloudInterface{
     override fun getUserCloudCasts(username: String): UserCloudCastResponse? {
         val cloudCastCall = mixCloudApi.getUserCloudCasts(username)
         return executeRequest(cloudCastCall)
+    }
+
+    override fun getUserComments(username: String): UserCommentsResponse? {
+        val userCommentsCall = mixCloudApi.getUserComments(username)
+        return executeRequest(userCommentsCall)
+    }
+
+    override fun getUserFavorites(username: String): UserFavoritesResponse? {
+        val userFavorites = mixCloudApi.getUserFavorites(username)
+        return executeRequest(userFavorites)
+    }
+
+    override fun getUserFeed(username: String): UserFeedResponse? {
+         val userFeedCall = mixCloudApi.getUserFeed(username)
+        return executeRequest(userFeedCall)
+    }
+
+    override fun getUserFollowers(username: String): UserFollowersResponse? {
+        val userFollowersCall = mixCloudApi.getUserFollowers(username)
+        return executeRequest(userFollowersCall)
+    }
+
+    override fun getUserFollowing(username: String): UserFollowingResponse? {
+        val userFollowingCall = mixCloudApi.getUserFollowing(username)
+        return executeRequest(userFollowingCall)
+    }
+
+    override fun getUserListens(username: String): UserListensResponse? {
+        val userListensCall = mixCloudApi.getUserListens(username)
+        return executeRequest(userListensCall)
+    }
+
+    override fun getUserPlaylists(username: String): UserPlaylistsResponse? {
+        val userPlaylistCall = mixCloudApi.getUserPlaylists(username)
+        return executeRequest(userPlaylistCall)
     }
 
     override fun getTag(tag: String): TagResponse? {

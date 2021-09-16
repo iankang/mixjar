@@ -1,11 +1,7 @@
 package com.mixsteroids.mixjar.services
 
-import com.mixsteroids.mixjar.models.show.ShowResponse
-import com.mixsteroids.mixjar.models.tag.*
-import com.mixsteroids.mixjar.models.user.UserResponse
-import com.mixsteroids.mixjar.models.userCloudCast.User
-import com.mixsteroids.mixjar.models.userCloudCast.UserCloudCastResponse
-import com.mixsteroids.mixjar.models.userComments.UserCommentsResponse
+
+import com.mixsteroids.mixjar.models.*
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -21,22 +17,22 @@ interface MixCloudService {
    fun getUserComments(@Path("user")username: String):Call<UserCommentsResponse>
 
    @GET("{user}/favorites")
-   fun getUserFavorites(@Path("user")username: String)
+   fun getUserFavorites(@Path("user")username: String):Call<UserFavoritesResponse>
 
    @GET("{user}/feed")
-   fun getUserFeed(@Path("user")username: String)
+   fun getUserFeed(@Path("user")username: String):Call<UserFeedResponse>
 
    @GET("{user}/followers")
-   fun getUserFollowers(@Path("user")username: String)
+   fun getUserFollowers(@Path("user")username: String):Call<UserFollowersResponse>
 
    @GET("{user}/following")
-   fun getUserFollowing(@Path("user")username: String)
+   fun getUserFollowing(@Path("user")username: String):Call<UserFollowingResponse>
 
    @GET("{user}/listens")
-   fun getUserListens(@Path("user")username: String)
+   fun getUserListens(@Path("user")username: String):Call<UserListensResponse>
 
    @GET("{user}/playlists")
-   fun getUserPlaylists(@Path("user")username: String)
+   fun getUserPlaylists(@Path("user")username: String):Call<UserPlaylistsResponse>
 
 
    @GET("{entertainer}/{showname}/?metadata=1")

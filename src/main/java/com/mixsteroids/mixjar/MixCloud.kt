@@ -1,11 +1,6 @@
 package com.mixsteroids.mixjar
 
-import com.mixsteroids.mixjar.models.show.ShowResponse
-import com.mixsteroids.mixjar.models.tag.CityResponse
-import com.mixsteroids.mixjar.models.tag.TagAndCityResponse
-import com.mixsteroids.mixjar.models.tag.TagResponse
-import com.mixsteroids.mixjar.models.user.UserResponse
-import com.mixsteroids.mixjar.models.userCloudCast.UserCloudCastResponse
+import com.mixsteroids.mixjar.models.*
 import com.mixsteroids.mixjar.services.MixCloudServiceImpl
 
 class MixCloud {
@@ -23,10 +18,38 @@ class MixCloud {
         return mixCloudInterface.getUserCloudCasts(username)
     }
 
-    fun getTags(tag:String):TagResponse?{
+    fun getUserComments(username: String):UserCommentsResponse?{
+        return mixCloudInterface.getUserComments(username)
+    }
+
+    fun getUserFavorites(username: String):UserFavoritesResponse?{
+        return mixCloudInterface.getUserFavorites(username)
+    }
+
+    fun getUserFeed(username: String):UserFeedResponse?{
+        return mixCloudInterface.getUserFeed(username)
+    }
+
+    fun getUserFollowers(username: String):UserFollowersResponse?{
+        return mixCloudInterface.getUserFollowers(username)
+    }
+
+    fun getUserFollowing(username: String):UserFollowingResponse?{
+        return mixCloudInterface.getUserFollowing(username)
+    }
+
+    fun getUserListens(username: String):UserListensResponse?{
+        return mixCloudInterface.getUserListens(username)
+    }
+
+    fun getUserPlaylists(username: String):UserPlaylistsResponse?{
+        return mixCloudInterface.getUserPlaylists(username)
+    }
+
+    fun getTags(tag:String): TagResponse?{
         return mixCloudInterface.getTag(tag)
     }
-    fun getCity(city:String):CityResponse?{
+    fun getCity(city:String): CityResponse?{
         return mixCloudInterface.getCity(city)
     }
     fun getTagAndCity(tag: String,city: String):TagAndCityResponse?{

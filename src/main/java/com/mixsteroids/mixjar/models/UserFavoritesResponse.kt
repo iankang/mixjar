@@ -1,21 +1,21 @@
-package com.mixsteroids.mixjar.models.userFavorites
+package com.mixsteroids.mixjar.models
 
 import com.google.gson.annotations.SerializedName
 
 
 data class UserFavoritesResponse (
 
-	@SerializedName("data") val data : List<Data>,
-	@SerializedName("paging") val paging : Paging,
+	@SerializedName("data") val data : List<UserFavoritesResponseData>,
+	@SerializedName("paging") val paging : UserFavoritesResponsePaging,
 	@SerializedName("name") val name : String
 )
 
-data class Data (
+data class UserFavoritesResponseData (
 
 	@SerializedName("key") val key : String,
 	@SerializedName("url") val url : String,
 	@SerializedName("name") val name : String,
-	@SerializedName("tags") val tags : List<Tags>,
+	@SerializedName("tags") val tags : List<UserFavoritesResponseTags>,
 	@SerializedName("created_time") val created_time : String,
 	@SerializedName("updated_time") val updated_time : String,
 	@SerializedName("play_count") val play_count : Int,
@@ -23,19 +23,19 @@ data class Data (
 	@SerializedName("comment_count") val comment_count : Int,
 	@SerializedName("listener_count") val listener_count : Int,
 	@SerializedName("repost_count") val repost_count : Int,
-	@SerializedName("pictures") val pictures : Pictures,
+	@SerializedName("pictures") val pictures : UserFavoritesResponsePictures,
 	@SerializedName("slug") val slug : String,
-	@SerializedName("user") val user : User,
+	@SerializedName("user") val user : UserFavoritesResponseUser,
 	@SerializedName("audio_length") val audio_length : Int
 )
 
-data class Paging (
+data class UserFavoritesResponsePaging (
 
 	@SerializedName("next") val next : String,
 	@SerializedName("previous") val previous : String
 )
 
-data class Pictures (
+data class UserFavoritesResponsePictures (
 
 	@SerializedName("small") val small : String,
 	@SerializedName("thumbnail") val thumbnail : String,
@@ -48,18 +48,18 @@ data class Pictures (
 )
 
 
-data class Tags (
+data class UserFavoritesResponseTags (
 
 	@SerializedName("key") val key : String,
 	@SerializedName("url") val url : String,
 	@SerializedName("name") val name : String
 )
 
-data class User (
+data class UserFavoritesResponseUser (
 
 	@SerializedName("key") val key : String,
 	@SerializedName("url") val url : String,
 	@SerializedName("name") val name : String,
 	@SerializedName("username") val username : String,
-	@SerializedName("pictures") val pictures : Pictures
+	@SerializedName("pictures") val pictures : UserFavoritesResponsePictures
 )
