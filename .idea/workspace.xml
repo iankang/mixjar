@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1972f3f-5662-4c20-ba65-1b43ba360cfb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/userCloudCast/Data.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/userCloudCast/Paging.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/userCloudCast/Pictures.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/userCloudCast/Tags.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/userCloudCast/User.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/userCloudCast/UserCloudCastResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloud.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloud.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloudInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloudInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
