@@ -10,5 +10,6 @@ fun main(){
 //mixCloudServiceImpl.getUserComments("ndungujan23")
 //    mixCloudServiceImpl.getUserFollowers("ndungujan23")
 //    mixCloudServiceImpl.getUserFollowing("ndungujan23")
-    mixCloudServiceImpl.getUserListens("ndungujan23")
+//    mixCloudServiceImpl.getUserListens("ndungujan23")
+    mixCloudServiceImpl.getUserPlaylists("ndungujan23")
 }

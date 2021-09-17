@@ -15,7 +15,7 @@ data class UserListensResponseData (
 	@SerializedName("key") val key : String,
 	@SerializedName("url") val url : String,
 	@SerializedName("name") val name : String,
-	@SerializedName("tags") val tags : List<String>,
+	@SerializedName("tags") val tags : List<UserListensTags>,
 	@SerializedName("created_time") val created_time : String,
 	@SerializedName("updated_time") val updated_time : String,
 	@SerializedName("play_count") val play_count : Int,
@@ -32,6 +32,7 @@ data class UserListensResponseData (
 
 data class UserListensResponsePaging (
 
+	@SerializedName("next") val next : String,
 	@SerializedName("previous") val previous : String
 )
 
@@ -54,4 +55,10 @@ data class UserListensResponseUser (
 	@SerializedName("name") val name : String,
 	@SerializedName("username") val username : String,
 	@SerializedName("pictures") val pictures : UserListensResponsePictures
+)
+data class UserListensTags (
+
+	@SerializedName("key") val key : String,
+	@SerializedName("url") val url : String,
+	@SerializedName("name") val name : String
 )

@@ -34,6 +34,7 @@ data class UserCommentsResponsePictures (
 
 data class UserCommentsResponsePaging (
 
+	@SerializedName("next") val next : String,
 	@SerializedName("previous") val previous : String
 )
 

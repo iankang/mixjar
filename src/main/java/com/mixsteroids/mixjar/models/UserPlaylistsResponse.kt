@@ -29,6 +29,7 @@ data class UserPlaylistsResponseOwner (
 )
 data class UserPlaylistsResponsePaging (
 
+	@SerializedName("next") val next : String,
 	@SerializedName("previous") val previous : String
 )
 
