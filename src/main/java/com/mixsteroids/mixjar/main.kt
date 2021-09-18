@@ -2,14 +2,18 @@ package com.mixsteroids.mixjar
 
 fun main(){
     val mixCloudServiceImpl = MixCloud()
-//    mixCloudServiceImpl.getShows("spartacus","party-time")
-//    mixCloudServiceImpl.getUsers("DjChief254")
-//    mixCloudServiceImpl.getUserCloudCast("Dj  Chief254")
+//    mixCloudServiceImpl.getShow("spartacus","party-time")
+//    mixCloudServiceImpl.getUser("DjChief254")
+//    mixCloudServiceImpl.getUserCloudCast("DjChief254",2)
 //    mixCloudServiceImpl.getCity("nairobi");
-//    mixCloudServiceImpl.getUserFeed("ndungujan23")
-//mixCloudServiceImpl.getUserComments("ndungujan23")
-//    mixCloudServiceImpl.getUserFollowers("ndungujan23")
-//    mixCloudServiceImpl.getUserFollowing("ndungujan23")
-//    mixCloudServiceImpl.getUserListens("ndungujan23")
-    mixCloudServiceImpl.getUserPlaylists("ndungujan23")
+//    mixCloudServiceImpl.getUserFeed("ndungujan23",3)
+//mixCloudServiceImpl.getUserComments("ndungujan23",0)
+//    mixCloudServiceImpl.getUserFollowers("ndungujan23",0)
+//    mixCloudServiceImpl.getUserFollowing("ndungujan23",2)
+//    mixCloudServiceImpl.getUserListens("ndungujan23",2)
+//    mixCloudServiceImpl.getUserPlaylists("ndungujan23",0)
+//    mixCloudServiceImpl.getShowFavorites("spartacus","party-time",0)
+//    mixCloudServiceImpl.getShowListeners("spartacus","party-time",1)
+//    mixCloudServiceImpl.getShowComments("spartacus","party-time",0)
+    mixCloudServiceImpl.getShowSimilar("spartacus","party-time",0)
 }

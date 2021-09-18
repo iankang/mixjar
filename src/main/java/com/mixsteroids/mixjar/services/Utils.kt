@@ -23,3 +23,10 @@ import retrofit2.Response
     })
      return item
 }
+
+fun getOffsetFromPage(page:Int):Int?{
+    if(page>=0 && page<=Int.MAX_VALUE){
+        return page.times(20)
+    }
+    return null
+}

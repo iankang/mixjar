@@ -10,52 +10,73 @@ class MixCloudServiceImpl :MixCloudInterface{
     private val network = Network()
     private val mixCloudApi = network.getMixCloudRetrofitInstance().create<MixCloudService>()
 
-     override fun getShow(entertainer:String, show:String): ShowResponse?{
-         val showCall = mixCloudApi.getShow(entertainer,show)
+     override fun getShow(entertainer:String, show:String,page: Int): ShowResponse?{
+         val showCall = mixCloudApi.getShow(entertainer,show,offset = getOffsetFromPage(page)!!)
          return executeRequest(showCall)
      }
+
+    override fun getShowFavorites(entertainer: String, show: String, page: Int): ShowFavoritesResponse {
+        val showFavoritesCall = mixCloudApi.getShowFavorites(entertainer,show,offset = getOffsetFromPage(page)!!)
+        return executeRequest(showFavoritesCall)!!
+    }
+
+    override fun getShowListeners(entertainer: String, show: String, page: Int): ShowListenersResponse? {
+        val showListenersCall = mixCloudApi.getShowListeners(entertainer,show,offset = getOffsetFromPage(page)!!)
+        return executeRequest(showListenersCall)
+    }
+
+    override fun getShowComments(entertainer: String, show: String, page: Int): ShowCommentsResponse? {
+        val showCommentsCall = mixCloudApi.getShowComments(entertainer,show,offset = getOffsetFromPage(page)!!)
+        return executeRequest(showCommentsCall)
+    }
+
+    override fun getShowSimilar(entertainer: String, show: String, page: Int): ShowSimilarResponse? {
+        val showSimilarCall = mixCloudApi.getShowSimilar(entertainer,show,offset = getOffsetFromPage(page)!!)
+        return executeRequest(showSimilarCall)
+    }
+
     override fun getUser(username:String): UserResponse? {
         val userCall = mixCloudApi.getUser(username)
        return executeRequest(userCall)
     }
 
-    override fun getUserCloudCasts(username: String): UserCloudCastResponse? {
-        val cloudCastCall = mixCloudApi.getUserCloudCasts(username)
+    override fun getUserCloudCasts(username: String, page:Int): UserCloudCastResponse? {
+        val cloudCastCall = mixCloudApi.getUserCloudCasts(username,offset = getOffsetFromPage(page)!!)
         return executeRequest(cloudCastCall)
     }
 
-    override fun getUserComments(username: String): UserCommentsResponse? {
-        val userCommentsCall = mixCloudApi.getUserComments(username)
+    override fun getUserComments(username: String, page:Int): UserCommentsResponse? {
+        val userCommentsCall = mixCloudApi.getUserComments(username,offset = getOffsetFromPage(page)!!)
         return executeRequest(userCommentsCall)
     }
 
-    override fun getUserFavorites(username: String): UserFavoritesResponse? {
-        val userFavorites = mixCloudApi.getUserFavorites(username)
+    override fun getUserFavorites(username: String, page:Int): UserFavoritesResponse? {
+        val userFavorites = mixCloudApi.getUserFavorites(username,offset = getOffsetFromPage(page)!!)
         return executeRequest(userFavorites)
     }
 
-    override fun getUserFeed(username: String): UserFeedResponse? {
-         val userFeedCall = mixCloudApi.getUserFeed(username)
+    override fun getUserFeed(username: String, page:Int): UserFeedResponse? {
+         val userFeedCall = mixCloudApi.getUserFeed(username,offset = getOffsetFromPage(page)!!)
         return executeRequest(userFeedCall)
     }
 
-    override fun getUserFollowers(username: String): UserFollowersResponse? {
-        val userFollowersCall = mixCloudApi.getUserFollowers(username)
+    override fun getUserFollowers(username: String, page:Int): UserFollowersResponse? {
+        val userFollowersCall = mixCloudApi.getUserFollowers(username,offset = getOffsetFromPage(page)!!)
         return executeRequest(userFollowersCall)
     }
 
-    override fun getUserFollowing(username: String): UserFollowingResponse? {
-        val userFollowingCall = mixCloudApi.getUserFollowing(username)
+    override fun getUserFollowing(username: String, page:Int): UserFollowingResponse? {
+        val userFollowingCall = mixCloudApi.getUserFollowing(username,offset = getOffsetFromPage(page)!!)
         return executeRequest(userFollowingCall)
     }
 
-    override fun getUserListens(username: String): UserListensResponse? {
-        val userListensCall = mixCloudApi.getUserListens(username)
+    override fun getUserListens(username: String, page:Int): UserListensResponse? {
+        val userListensCall = mixCloudApi.getUserListens(username,offset = getOffsetFromPage(page)!!)
         return executeRequest(userListensCall)
     }
 
-    override fun getUserPlaylists(username: String): UserPlaylistsResponse? {
-        val userPlaylistCall = mixCloudApi.getUserPlaylists(username)
+    override fun getUserPlaylists(username: String, page:Int): UserPlaylistsResponse? {
+        val userPlaylistCall = mixCloudApi.getUserPlaylists(username,offset = getOffsetFromPage(page)!!)
         return executeRequest(userPlaylistCall)
     }
 
