@@ -85,9 +85,29 @@ class MixCloudServiceImpl :MixCloudInterface{
         return executeRequest(tagCall)
     }
 
+    override fun getLatestTag(tag: String, page: Int): LatestTagResponse? {
+        val latestTagCall = mixCloudApi.getLatestTag(tag,offset = getOffsetFromPage(page)!!)
+        return executeRequest(latestTagCall)
+    }
+
+    override fun getPopularTag(tag: String, page: Int): PopularTagResponse? {
+        val popularTagCall = mixCloudApi.getPopularTag(tag,offset = getOffsetFromPage(page)!!)
+        return executeRequest(popularTagCall)
+    }
+
     override fun getCity(city: String): CityResponse? {
        val cityCall = mixCloudApi.getCity(city)
         return executeRequest(cityCall)
+    }
+
+    override fun getCityPopular(city: String, page: Int): CityPopularResponse? {
+        val cityPopularCall = mixCloudApi.getCityPopular(city,offset = getOffsetFromPage(page)!!)
+        return executeRequest(cityPopularCall)
+    }
+
+    override fun getCityLatest(city: String, page: Int): CityLatestResponse? {
+        val cityLatest = mixCloudApi.getCityLatest(city,offset = getOffsetFromPage(page)!!)
+        return executeRequest(cityLatest)
     }
 
     override fun getTagAndCity(tag: String, city: String): TagAndCityResponse? {

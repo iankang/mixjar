@@ -63,8 +63,16 @@ class MixCloud {
         return mixCloudInterface.getUserPlaylists(username,page)
     }
 
-    fun getTags(tag:String): TagResponse?{
+    fun getTag(tag:String): TagResponse?{
         return mixCloudInterface.getTag(tag)
+    }
+
+    fun getPopularTag(tag:String, page: Int):PopularTagResponse?{
+        return mixCloudInterface.getPopularTag(tag, page)
+    }
+
+    fun getLatestTag(tag: String,page: Int):LatestTagResponse?{
+        return mixCloudInterface.getLatestTag(tag, page)
     }
     fun getCity(city:String): CityResponse?{
         return mixCloudInterface.getCity(city)

@@ -55,8 +55,20 @@ interface MixCloudService {
    @GET("discover/{tag}/?metadata=1")
    fun getTag(@Path("tag") tag:String):Call<TagResponse>
 
+   @GET("discover/{tag}/popular/")
+   fun getPopularTag(@Path("tag") tag:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Call<PopularTagResponse>
+
+   @GET("discover/{tag}/latest/")
+   fun getLatestTag(@Path("tag") tag:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Call<LatestTagResponse>
+
    @GET("discover/city:{city}/?metadata=1")
    fun getCity(@Path("city") city:String):Call<CityResponse>
+
+   @GET("discover/city:{city}/popular/")
+   fun getCityPopular(@Path("city") city:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Call<CityPopularResponse>
+
+   @GET("discover/city:{city}/latest/")
+   fun getCityLatest(@Path("city") city:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Call<CityLatestResponse>
 
    @GET("discover/{tag}+city:{city}/?metadata=1")
    fun getTagAndCity(@Path("tag")tag:String,@Path("city") city: String):Call<TagAndCityResponse>

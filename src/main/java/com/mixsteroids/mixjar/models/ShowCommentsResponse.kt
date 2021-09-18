@@ -21,6 +21,7 @@ data class ShowCommentsResponseData (
 
 data class ShowCommentsResponsePaging (
 
+	@SerializedName("next") val next : String,
 	@SerializedName("previous") val previous : String
 )
 data class ShowCommentsResponseUser (

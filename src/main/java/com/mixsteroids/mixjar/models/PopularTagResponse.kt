@@ -3,19 +3,18 @@ package com.mixsteroids.mixjar.models
 import com.google.gson.annotations.SerializedName
 
 
-data class ShowSimilarResponse (
+data class PopularTagResponse (
 
-	@SerializedName("data") val data : List<ShowSimilarResponseData>,
-	@SerializedName("paging") val paging : ShowSimilarResponsePaging,
-	@SerializedName("name") val name : String
+	@SerializedName("data") val data : List<PopularTagResponseData>,
+	@SerializedName("paging") val paging : PopularTagResponsePaging
 )
 
-data class ShowSimilarResponseData (
+data class PopularTagResponseData (
 
 	@SerializedName("key") val key : String,
 	@SerializedName("url") val url : String,
 	@SerializedName("name") val name : String,
-	@SerializedName("tags") val tags : List<ShowSimilarResponseTags>,
+	@SerializedName("tags") val tags : List<PopularTagResponseTags>,
 	@SerializedName("created_time") val created_time : String,
 	@SerializedName("updated_time") val updated_time : String,
 	@SerializedName("play_count") val play_count : Int,
@@ -23,22 +22,17 @@ data class ShowSimilarResponseData (
 	@SerializedName("comment_count") val comment_count : Int,
 	@SerializedName("listener_count") val listener_count : Int,
 	@SerializedName("repost_count") val repost_count : Int,
-	@SerializedName("pictures") val pictures : ShowSimilarResponsePictures,
+	@SerializedName("pictures") val pictures : PopularTagResponsePictures,
 	@SerializedName("slug") val slug : String,
-	@SerializedName("user") val user : ShowSimilarResponseUser,
-	@SerializedName("hidden_stats") val hidden_stats : Boolean,
+	@SerializedName("user") val user : PopularTagResponseUser,
 	@SerializedName("audio_length") val audio_length : Int
 )
-
-
-data class ShowSimilarResponsePaging (
+data class PopularTagResponsePaging (
 
 	@SerializedName("next") val next : String,
 	@SerializedName("previous") val previous : String
-
 )
-
-data class ShowSimilarResponsePictures (
+data class PopularTagResponsePictures (
 
 	@SerializedName("small") val small : String,
 	@SerializedName("thumbnail") val thumbnail : String,
@@ -50,18 +44,17 @@ data class ShowSimilarResponsePictures (
 	@SerializedName("640wx640h") val picture640wx640h : String
 )
 
-data class ShowSimilarResponseTags (
+data class PopularTagResponseTags (
 
 	@SerializedName("key") val key : String,
 	@SerializedName("url") val url : String,
 	@SerializedName("name") val name : String
 )
-
-data class ShowSimilarResponseUser (
+data class PopularTagResponseUser (
 
 	@SerializedName("key") val key : String,
 	@SerializedName("url") val url : String,
 	@SerializedName("name") val name : String,
 	@SerializedName("username") val username : String,
-	@SerializedName("pictures") val pictures : ShowSimilarResponsePictures
+	@SerializedName("pictures") val pictures : PopularTagResponsePictures
 )

@@ -34,7 +34,15 @@ interface MixCloudInterface {
 
     fun getTag(tag:String): TagResponse?
 
+    fun getLatestTag(tag: String,page: Int):LatestTagResponse?
+
+    fun getPopularTag(tag: String,page: Int):PopularTagResponse?
+
     fun getCity(city:String): CityResponse?
+
+    fun getCityPopular(city:String,page: Int):CityPopularResponse?
+
+    fun getCityLatest(city: String,page: Int):CityLatestResponse?
 
     fun getTagAndCity(tag:String, city:String):TagAndCityResponse?
 }

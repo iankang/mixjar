@@ -15,5 +15,8 @@ fun main(){
 //    mixCloudServiceImpl.getShowFavorites("spartacus","party-time",0)
 //    mixCloudServiceImpl.getShowListeners("spartacus","party-time",1)
 //    mixCloudServiceImpl.getShowComments("spartacus","party-time",0)
-    mixCloudServiceImpl.getShowSimilar("spartacus","party-time",0)
+//    mixCloudServiceImpl.getShowSimilar("spartacus","party-time",0)
+//    mixCloudServiceImpl.getTag("reggae")
+//    mixCloudServiceImpl.getLatestTag("dancehall",0)
+//    mixCloudServiceImpl.getPopularTag("dancehall",0)
 }
