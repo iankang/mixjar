@@ -19,4 +19,6 @@ fun main(){
 //    mixCloudServiceImpl.getTag("reggae")
 //    mixCloudServiceImpl.getLatestTag("dancehall",0)
 //    mixCloudServiceImpl.getPopularTag("dancehall",0)
+//    mixCloudServiceImpl.getTagAndCityPopular("dancehall","nairobi",1)
+//    mixCloudServiceImpl.getTagAndCityLatest("dancehall","nairobi",1)
 }

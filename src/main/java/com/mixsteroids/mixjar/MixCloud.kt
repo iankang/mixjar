@@ -80,4 +80,13 @@ class MixCloud {
     fun getTagAndCity(tag: String,city: String):TagAndCityResponse?{
         return mixCloudInterface.getTagAndCity(tag, city)
     }
+
+    fun getTagAndCityPopular(tag: String,city: String,page: Int):CityAndTagPopularResponse?{
+        return mixCloudInterface.getTagAndCityPopular(tag, city, page)
+    }
+
+    fun getTagAndCityLatest(tag: String,city: String,page: Int):CityAndTagLatestResponse?{
+        return mixCloudInterface.getTagAndCityLatest(tag, city, page)
+    }
+
 }
