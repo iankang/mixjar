@@ -7,7 +7,7 @@ fun main(){
 //    mixCloudServiceImpl.getUserCloudCast("DjChief254",2)
 //    mixCloudServiceImpl.getCity("nairobi");
 //    mixCloudServiceImpl.getUserFeed("ndungujan23",3)
-//mixCloudServiceImpl.getUserComments("ndungujan23",0)
+//    mixCloudServiceImpl.getUserComments("ndungujan23",0)
 //    mixCloudServiceImpl.getUserFollowers("ndungujan23",0)
 //    mixCloudServiceImpl.getUserFollowing("ndungujan23",2)
 //    mixCloudServiceImpl.getUserListens("ndungujan23",2)
