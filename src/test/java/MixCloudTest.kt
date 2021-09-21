@@ -1,6 +1,7 @@
 
 import com.mixsteroids.mixjar.utils.Mixcloud.BASE_URL
 import io.restassured.RestAssured
+import io.restassured.RestAssured.enableLoggingOfRequestAndResponseIfValidationFails
 import io.restassured.RestAssured.get
 import io.restassured.builder.RequestSpecBuilder
 import io.restassured.config.LogConfig
@@ -17,40 +18,17 @@ import org.junit.Test
 
 class MixCloudTest {
 
-    companion object {
-        lateinit var requestSpecification: RequestSpecification
-    }
 
-    @Before
-    fun setup(){
-        val logconfig = LogConfig.logConfig()
-            .enableLoggingOfRequestAndResponseIfValidationFails(LogDetail.ALL)
-        val config = RestAssuredConfig.config().logConfig(logconfig)
-
-        requestSpecification = RequestSpecBuilder()
-            .setBaseUri(BASE_URL)
-            .setContentType(ContentType.JSON)
-            .setRelaxedHTTPSValidation()
-            .setConfig(config)
-            .build()
-
-    }
 
     @Test
     fun testGetUserCode_returns200(){
-        setup()
-        val validatableResponse = Given {
-            requestSpecification
-        } When {
-            get("/spartacus")
+
+      When {
+            get(BASE_URL+"spartacus")
         } Then {
             statusCode(200)
         }
     }
 
 
-    @After
-    fun tearDown(){
-        RestAssured.reset()
-    }
 }
