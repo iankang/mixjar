@@ -21,7 +21,7 @@ class Network {
 
     private fun getOkHttpClient():OkHttpClient{
         return OkHttpClient.Builder()
-            .addInterceptor(getLoggingInterceptor())
+//            .addInterceptor(getLoggingInterceptor())
             .readTimeout(2,TimeUnit.MINUTES)
             .connectTimeout(2,TimeUnit.MINUTES)
             .build()
