@@ -3,8 +3,12 @@ package com.mixsteroids.mixjar
 import com.mixsteroids.mixjar.models.*
 import com.mixsteroids.mixjar.services.MixCloudServiceImpl
 
-class MixCloud {
-   private val mixCloudInterface:MixCloudInterface = MixCloudServiceImpl()
+class MixCloud() {
+    private val mixCloudInterface:MixCloudInterface
+
+    init {
+        mixCloudInterface = MixCloudServiceImpl()
+    }
 
     fun getShow(entertainer:String,show:String,page:Int): ShowResponse? {
         return mixCloudInterface.getShow(entertainer, show,page)
