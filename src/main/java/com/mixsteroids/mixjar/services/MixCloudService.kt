@@ -3,6 +3,7 @@ package com.mixsteroids.mixjar.services
 
 import com.mixsteroids.mixjar.models.*
 import com.mixsteroids.mixjar.utils.Mixcloud.LIMIT_VALUE
+import io.reactivex.Single
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -10,7 +11,7 @@ import retrofit2.http.Query
 
 interface MixCloudService {
    @GET("{user}/?metadata=1")
-   fun getUser(@Path("user")username:String):Call<UserResponse>
+   fun getUser(@Path("user")username:String): Single<UserResponse>
 
    @GET("{user}/cloudcasts")
    fun getUserCloudCasts(@Path("user")username: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Call<UserCloudCastResponse>

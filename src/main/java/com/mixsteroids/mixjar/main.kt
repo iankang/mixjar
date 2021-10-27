@@ -2,7 +2,8 @@ package com.mixsteroids.mixjar
 
 fun main(){
     val mixCloudServiceImpl = MixCloud()
-    mixCloudServiceImpl.getShow("spartacus","party-time",1)
+    val item = mixCloudServiceImpl.getShow("spartacus","party-time",1)
+    println(item)
 //    mixCloudServiceImpl.getUser("DjChief254")
 //    mixCloudServiceImpl.getUserCloudCast("DjChief254",2)
 //    mixCloudServiceImpl.getCity("nairobi");

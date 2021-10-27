@@ -4,7 +4,7 @@ import com.mixsteroids.mixjar.models.*
 import com.mixsteroids.mixjar.services.MixCloudServiceImpl
 
 class MixCloud() {
-    private val mixCloudInterface:MixCloudInterface
+    val mixCloudInterface:MixCloudInterface
 
     init {
         mixCloudInterface = MixCloudServiceImpl()
