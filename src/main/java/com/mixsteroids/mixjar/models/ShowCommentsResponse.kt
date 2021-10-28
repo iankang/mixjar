@@ -8,7 +8,13 @@ data class ShowCommentsResponse (
 	@SerializedName("data") val data : List<ShowCommentsResponseData>,
 	@SerializedName("paging") val paging : ShowCommentsResponsePaging,
 	@SerializedName("name") val name : String
-)
+){
+	constructor(showCommentsResponse: ShowCommentsResponse):this(
+		showCommentsResponse.data,
+		showCommentsResponse.paging,
+		showCommentsResponse.name
+	)
+}
 
 data class ShowCommentsResponseData (
 

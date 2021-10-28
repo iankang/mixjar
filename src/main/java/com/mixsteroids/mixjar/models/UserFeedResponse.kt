@@ -8,7 +8,12 @@ data class UserFeedResponse (
         @SerializedName("paging") var paging : UserFeedPaging,
         @SerializedName("name") var name : String
 
-    )
+    ){
+    constructor(userFeedResponse: UserFeedResponse):
+            this(userFeedResponse.data,
+            userFeedResponse.paging,
+            userFeedResponse.name)
+}
 
 data class UserFeedPictures (
 

@@ -8,7 +8,14 @@ data class ShowListenersResponse (
 	@SerializedName("data") val data : List<ShowListenersResponseData>,
 	@SerializedName("paging") val paging : ShowListenersResponsePaging,
 	@SerializedName("name") val name : String
-)
+){
+	constructor(showListenersResponse: ShowListenersResponse):
+			this(
+				showListenersResponse.data,
+				showListenersResponse.paging,
+				showListenersResponse.name
+			)
+}
 
 data class ShowListenersResponseData (
 

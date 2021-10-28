@@ -25,7 +25,31 @@ data class ShowResponse (
 	@SerializedName("picture_primary_color") val picture_primary_color : Int,
 	@SerializedName("type") val type : String,
 	@SerializedName("metadata") val metadata : ShowResponseMetadata
-)
+){
+	constructor(showResponse: ShowResponse):
+			this(
+				showResponse.key,
+				showResponse.url,
+				showResponse.name,
+				showResponse.tags,
+				showResponse.created_time,
+				showResponse.updated_time,
+				showResponse.play_count,
+				showResponse.favorite_count,
+				showResponse.comment_count,
+				showResponse.listener_count,
+				showResponse.repost_count,
+				showResponse.pictures,
+				showResponse.slug,
+				showResponse.user,
+				showResponse.audio_length,
+				showResponse.description,
+				showResponse.sections,
+				showResponse.picture_primary_color,
+				showResponse.type,
+				showResponse.metadata
+			)
+}
 
 data class ShowResponseConnections (
 	@SerializedName("favorites") val favorites : String,

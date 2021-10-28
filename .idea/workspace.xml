@@ -6,12 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="a1972f3f-5662-4c20-ba65-1b43ba360cfb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloud.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloud.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/network/Network.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/network/Network.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/CityAndTagLatestResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/CityAndTagLatestResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/CityAndTagPopularResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/CityAndTagPopularResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/CityLatestResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/CityLatestResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/CityPopularResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/CityPopularResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/LatestTagResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/LatestTagResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/PopularTagResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/PopularTagResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowCommentsResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowCommentsResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowFavoritesResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowFavoritesResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowListenersResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowListenersResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowSimilarResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ShowSimilarResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/TagResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/TagResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserCloudCastResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserCloudCastResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserCommentsResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserCommentsResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserFavoritesResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserFavoritesResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserFeedResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserFeedResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserFollowersResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserFollowersResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserFollowingResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserFollowingResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserListensResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserListensResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserPlaylistsResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserPlaylistsResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/Utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/mixjar.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +148,7 @@
       <updated>1629807965229</updated>
       <workItem from="1635307363963" duration="8162000" />
       <workItem from="1635347190719" duration="1793000" />
+      <workItem from="1635432683763" duration="4438000" />
     </task>
     <servers />
   </component>

@@ -12,117 +12,209 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getShow(entertainer: String, show: String, page: Int): ShowResponse? {
         val showCall = mixCloudApi.getShow(entertainer, show, offset = getOffsetFromPage(page)!!)
-        return executeRequest(showCall)
+        var showResponseRx:ShowResponse? = null
+        showCall.subscribe { showResponse, throwable ->
+            showResponseRx = ShowResponse(showResponse)
+        }
+        return showResponseRx
     }
 
-    override fun getShowFavorites(entertainer: String, show: String, page: Int): ShowFavoritesResponse {
+    override fun getShowFavorites(entertainer: String, show: String, page: Int): ShowFavoritesResponse? {
         val showFavoritesCall = mixCloudApi.getShowFavorites(entertainer, show, offset = getOffsetFromPage(page)!!)
-        return executeRequest(showFavoritesCall)!!
+        var showFavoritesRx:ShowFavoritesResponse? = null
+        showFavoritesCall.subscribe { showFavoritesResponse, throwable ->
+            showFavoritesRx = ShowFavoritesResponse(showFavoritesResponse)
+        }
+        return showFavoritesRx
     }
 
     override fun getShowListeners(entertainer: String, show: String, page: Int): ShowListenersResponse? {
         val showListenersCall = mixCloudApi.getShowListeners(entertainer, show, offset = getOffsetFromPage(page)!!)
-        return executeRequest(showListenersCall)
+        var showListenersRx:ShowListenersResponse? = null
+        showListenersCall.subscribe { showListenersResponse, throwable ->
+            showListenersRx = ShowListenersResponse(showListenersResponse)
+        }
+        return showListenersRx
     }
 
     override fun getShowComments(entertainer: String, show: String, page: Int): ShowCommentsResponse? {
         val showCommentsCall = mixCloudApi.getShowComments(entertainer, show, offset = getOffsetFromPage(page)!!)
-        return executeRequest(showCommentsCall)
+        var showCommentsResponseRx:ShowCommentsResponse? = null
+        showCommentsCall.subscribe { showCommentsResponse, throwable ->
+            showCommentsResponseRx = ShowCommentsResponse(showCommentsResponse)
+        }
+        return showCommentsResponseRx
     }
 
     override fun getShowSimilar(entertainer: String, show: String, page: Int): ShowSimilarResponse? {
         val showSimilarCall = mixCloudApi.getShowSimilar(entertainer, show, offset = getOffsetFromPage(page)!!)
-        return executeRequest(showSimilarCall)
+        var showSimilarResponseRx:ShowSimilarResponse? = null
+        showSimilarCall.subscribe { showSimilarResponse, throwable ->
+            showSimilarResponseRx = ShowSimilarResponse(showSimilarResponse)
+        }
+        return showSimilarResponseRx
     }
 
     override fun getUser(username: String): UserResponse? {
         val userCall = mixCloudApi.getUser(username)
-        return executeRequest(userCall)
+        var userResponselocal:UserResponse? = null
+        userCall.subscribe { userResponse, throwable ->
+            userResponselocal = UserResponse(userResponse)
+        }
+        return userResponselocal
     }
 
     override fun getUserCloudCasts(username: String, page: Int): UserCloudCastResponse? {
         val cloudCastCall = mixCloudApi.getUserCloudCasts(username, offset = getOffsetFromPage(page)!!)
-        return executeRequest(cloudCastCall)
+        var userCloudCastResponseRx:UserCloudCastResponse? = null
+        cloudCastCall.subscribe { userCloudCastResponse, throwable ->
+            userCloudCastResponseRx = UserCloudCastResponse(userCloudCastResponse)
+        }
+        return userCloudCastResponseRx
     }
 
     override fun getUserComments(username: String, page: Int): UserCommentsResponse? {
         val userCommentsCall = mixCloudApi.getUserComments(username, offset = getOffsetFromPage(page)!!)
-        return executeRequest(userCommentsCall)
+        var userCommentsResponseRx:UserCommentsResponse? = null
+        userCommentsCall.subscribe { userCommentsResponse, throwable ->
+            userCommentsResponseRx = UserCommentsResponse(userCommentsResponse)
+        }
+        return userCommentsResponseRx
     }
 
     override fun getUserFavorites(username: String, page: Int): UserFavoritesResponse? {
         val userFavorites = mixCloudApi.getUserFavorites(username, offset = getOffsetFromPage(page)!!)
-        return executeRequest(userFavorites)
+        var userFavoritesResponseRx: UserFavoritesResponse? = null
+        userFavorites.subscribe { userFavoritesResponse, throwable ->
+            userFavoritesResponseRx = UserFavoritesResponse(userFavoritesResponse)
+        }
+        return userFavoritesResponseRx
     }
 
     override fun getUserFeed(username: String, page: Int): UserFeedResponse? {
         val userFeedCall = mixCloudApi.getUserFeed(username, offset = getOffsetFromPage(page)!!)
-        return executeRequest(userFeedCall)
+        var userFeedResponseRx:UserFeedResponse? = null
+        userFeedCall.subscribe { userFeedResponse, throwable ->
+            userFeedResponseRx = UserFeedResponse(userFeedResponse)
+        }
+        return userFeedResponseRx
     }
 
     override fun getUserFollowers(username: String, page: Int): UserFollowersResponse? {
         val userFollowersCall = mixCloudApi.getUserFollowers(username, offset = getOffsetFromPage(page)!!)
-        return executeRequest(userFollowersCall)
+        var userFollowersResponseRx:UserFollowersResponse? = null
+        userFollowersCall.subscribe { userFollowersResponse, throwable ->
+            userFollowersResponseRx = UserFollowersResponse(userFollowersResponse)
+        }
+        return userFollowersResponseRx
     }
 
     override fun getUserFollowing(username: String, page: Int): UserFollowingResponse? {
         val userFollowingCall = mixCloudApi.getUserFollowing(username, offset = getOffsetFromPage(page)!!)
-        return executeRequest(userFollowingCall)
+        var userFollowingResponseRx:UserFollowingResponse? = null
+        userFollowingCall.subscribe { userFollowingResponse, throwable ->
+            userFollowingResponseRx = UserFollowingResponse(userFollowingResponse)
+        }
+        return userFollowingResponseRx
     }
 
     override fun getUserListens(username: String, page: Int): UserListensResponse? {
         val userListensCall = mixCloudApi.getUserListens(username, offset = getOffsetFromPage(page)!!)
-        return executeRequest(userListensCall)
+        var userListensResponseRx:UserListensResponse? = null
+        userListensCall.subscribe { userListensResponse, throwable ->
+            userListensResponseRx = UserListensResponse(userListensResponse)
+        }
+        return userListensResponseRx
     }
 
     override fun getUserPlaylists(username: String, page: Int): UserPlaylistsResponse? {
         val userPlaylistCall = mixCloudApi.getUserPlaylists(username, offset = getOffsetFromPage(page)!!)
-        return executeRequest(userPlaylistCall)
+        var userPlayListsResponseRx:UserPlaylistsResponse? = null
+        userPlaylistCall.subscribe { userPlaylistsResponse, throwable ->
+            userPlayListsResponseRx = UserPlaylistsResponse(userPlaylistsResponse)
+        }
+        return userPlayListsResponseRx
     }
 
     override fun getTag(tag: String): TagResponse? {
         val tagCall = mixCloudApi.getTag(tag)
-        return executeRequest(tagCall)
+        var tagResponseRx:TagResponse? = null
+        tagCall.subscribe { tagResponse, throwable ->
+            tagResponseRx = TagResponse(tagResponse)
+        }
+        return tagResponseRx
     }
 
     override fun getLatestTag(tag: String, page: Int): LatestTagResponse? {
         val latestTagCall = mixCloudApi.getLatestTag(tag, offset = getOffsetFromPage(page)!!)
-        return executeRequest(latestTagCall)
+        var latestTagResponseRx: LatestTagResponse? = null
+        latestTagCall.subscribe { latestTagResponse, throwable ->
+            latestTagResponseRx = LatestTagResponse(latestTagResponse)
+        }
+        return latestTagResponseRx
     }
 
     override fun getPopularTag(tag: String, page: Int): PopularTagResponse? {
         val popularTagCall = mixCloudApi.getPopularTag(tag, offset = getOffsetFromPage(page)!!)
-        return executeRequest(popularTagCall)
+        var popularTagResponseRx:PopularTagResponse? = null
+        popularTagCall.subscribe { popularTagResponse, throwable ->
+            popularTagResponseRx = PopularTagResponse(popularTagResponse)
+        }
+        return popularTagResponseRx
     }
 
     override fun getCity(city: String): CityResponse? {
         val cityCall = mixCloudApi.getCity(city)
-        return executeRequest(cityCall)
+        var cityResponseRx: CityResponse? = null
+        cityCall.subscribe { cityResponse, throwable ->
+            cityResponseRx = CityResponse(cityResponse)
+        }
+        return cityResponseRx
     }
 
     override fun getCityPopular(city: String, page: Int): CityPopularResponse? {
         val cityPopularCall = mixCloudApi.getCityPopular(city, offset = getOffsetFromPage(page)!!)
-        return executeRequest(cityPopularCall)
+        var cityPopularResponseRx: CityPopularResponse? = null
+        cityPopularCall.subscribe { cityPopularResponse, throwable ->
+            cityPopularResponseRx = CityPopularResponse(cityPopularResponse)
+        }
+        return cityPopularResponseRx
     }
 
     override fun getCityLatest(city: String, page: Int): CityLatestResponse? {
         val cityLatest = mixCloudApi.getCityLatest(city, offset = getOffsetFromPage(page)!!)
-        return executeRequest(cityLatest)
+        var cityLatestResponseRx:CityLatestResponse? = null
+        cityLatest.subscribe { cityLatestResponse, throwable ->
+            cityLatestResponseRx = CityLatestResponse(cityLatestResponse)
+        }
+        return cityLatestResponseRx
     }
 
     override fun getTagAndCity(tag: String, city: String): TagAndCityResponse? {
         val tagAndCityCall = mixCloudApi.getTagAndCity(tag, city)
-        return executeRequest(tagAndCityCall)
+        var tagAndCityResponseRx:TagAndCityResponse? = null
+        tagAndCityCall.subscribe { tagAndCityResponse, throwable ->
+            tagAndCityResponseRx = TagAndCityResponse(tagAndCityResponse)
+        }
+        return tagAndCityResponseRx
     }
 
     override fun getTagAndCityPopular(tag: String, city: String, page: Int): CityAndTagPopularResponse? {
         val tagAndCityPopularCall = mixCloudApi.getTagAndCityPopular(tag, city, offset = getOffsetFromPage(page)!!)
-        return executeRequest(tagAndCityPopularCall)
+        var tagAndCityResponseRx:CityAndTagPopularResponse? = null
+        tagAndCityPopularCall.subscribe { cityAndTagPopularResponse, throwable ->
+            tagAndCityResponseRx = CityAndTagPopularResponse(cityAndTagPopularResponse)
+        }
+        return tagAndCityResponseRx
     }
 
     override fun getTagAndCityLatest(tag: String, city: String, page: Int): CityAndTagLatestResponse? {
         val tagAndCityLatestCall = mixCloudApi.getTagAndCityLatest(tag, city, offset = getOffsetFromPage(page)!!)
-        return executeRequest(tagAndCityLatestCall)
+        var cityAndTagLatestResponseRx:CityAndTagLatestResponse? = null
+        tagAndCityLatestCall.subscribe { cityAndTagLatestResponse, throwable ->
+            cityAndTagLatestResponseRx = CityAndTagLatestResponse(cityAndTagLatestResponse)
+        }
+        return cityAndTagLatestResponseRx
     }
 
 

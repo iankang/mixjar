@@ -7,7 +7,12 @@ data class UserFollowingResponse (
 
 	@SerializedName("data") val data : List<UserFollowingResponseData>,
 	@SerializedName("paging") val paging : UserFollowingResponsePaging
-)
+){
+	constructor(userFollowingResponse: UserFollowingResponse):this(
+		userFollowingResponse.data,
+		userFollowingResponse.paging
+	)
+}
 
 data class UserFollowingResponseData (
 

@@ -7,7 +7,10 @@ data class ShowFavoritesResponse (
 
 	@SerializedName("data") val data : List<ShowFavoritesResponseData>,
 	@SerializedName("paging") val paging : ShowFavoritesResponsePaging
-)
+){
+	constructor(showFavoritesResponse: ShowFavoritesResponse):
+			this(showFavoritesResponse.data,showFavoritesResponse.paging)
+}
 
 data class ShowFavoritesResponseData (
 

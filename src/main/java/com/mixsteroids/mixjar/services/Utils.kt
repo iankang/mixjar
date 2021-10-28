@@ -1,5 +1,6 @@
 package com.mixsteroids.mixjar.services
 
+import com.mixsteroids.mixjar.models.UserResponse
 import io.reactivex.Single
 import retrofit2.Call
 import retrofit2.Callback
@@ -23,10 +24,9 @@ fun <T : Any?> executeRequest(call: Call<T>): T? {
         }
     })
     return item?.t
-}fun <T : Any?> executeRxRequest(call: Single<T>): T? {
-//    var item:T? = null
-//    call.subscribeWith(object )
 }
+
+
 
 
 

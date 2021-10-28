@@ -8,7 +8,13 @@ data class UserFavoritesResponse (
 	@SerializedName("data") val data : List<UserFavoritesResponseData>,
 	@SerializedName("paging") val paging : UserFavoritesResponsePaging,
 	@SerializedName("name") val name : String
-)
+){
+	constructor(userFavoritesResponse: UserFavoritesResponse):this(
+		userFavoritesResponse.data,
+		userFavoritesResponse.paging,
+		userFavoritesResponse.name
+	)
+}
 
 data class UserFavoritesResponseData (
 

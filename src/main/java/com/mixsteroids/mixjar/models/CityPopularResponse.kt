@@ -6,7 +6,12 @@ data class CityPopularResponse (
 
 	@SerializedName("data") val data : List<CityPopularResponseData>,
 	@SerializedName("paging") val paging : CityPopularResponsePaging
-)
+){
+	constructor(cityPopularResponse: CityPopularResponse):this(
+		cityPopularResponse.data,
+		cityPopularResponse.paging
+	)
+}
 
 data class CityPopularResponseData (
 
