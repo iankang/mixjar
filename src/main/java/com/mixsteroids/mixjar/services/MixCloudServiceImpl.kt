@@ -14,7 +14,11 @@ class MixCloudServiceImpl : MixCloudInterface {
         val showCall = mixCloudApi.getShow(entertainer, show, offset = getOffsetFromPage(page)!!)
         var showResponseRx:ShowResponse? = null
         showCall.subscribe { showResponse, throwable ->
-            showResponseRx = ShowResponse(showResponse)
+            if(throwable == null) {
+                showResponseRx = ShowResponse(showResponse)
+            }else{
+                println(throwable.message)
+            }
         }
         return showResponseRx
     }
@@ -59,7 +63,11 @@ class MixCloudServiceImpl : MixCloudInterface {
         val userCall = mixCloudApi.getUser(username)
         var userResponselocal:UserResponse? = null
         userCall.subscribe { userResponse, throwable ->
-            userResponselocal = UserResponse(userResponse)
+            if(throwable == null) {
+                userResponselocal = UserResponse(userResponse)
+            }else{
+                throw Error(throwable.message)
+            }
         }
         return userResponselocal
     }
