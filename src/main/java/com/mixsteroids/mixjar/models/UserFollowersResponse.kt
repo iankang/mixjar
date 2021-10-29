@@ -8,7 +8,13 @@ data class UserFollowersResponse (
 	@SerializedName("data") val data : List<UserFollowersData>,
 	@SerializedName("paging") val paging : UserFollowersPaging,
 	@SerializedName("name") val name : String
-)
+){
+	constructor(userFollowersResponse: UserFollowersResponse):this(
+		userFollowersResponse.data,
+		userFollowersResponse.paging,
+		userFollowersResponse.name
+	)
+}
 
 data class UserFollowersData (
 

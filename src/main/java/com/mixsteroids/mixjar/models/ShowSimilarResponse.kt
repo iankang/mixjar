@@ -8,7 +8,13 @@ data class ShowSimilarResponse (
 	@SerializedName("data") val data : List<ShowSimilarResponseData>,
 	@SerializedName("paging") val paging : ShowSimilarResponsePaging,
 	@SerializedName("name") val name : String
-)
+){
+	constructor(showSimilarResponse: ShowSimilarResponse):this(
+		showSimilarResponse.data,
+		showSimilarResponse.paging,
+		showSimilarResponse.name,
+	)
+}
 
 data class ShowSimilarResponseData (
 

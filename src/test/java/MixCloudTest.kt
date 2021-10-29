@@ -30,5 +30,13 @@ class MixCloudTest {
         }
     }
 
+    @Test
+    fun testGetMisspelledUserCode_returns404(){
+        When{
+            get(BASE_URL +"spartacus1")
+        } Then {
+            statusCode(200)
+        }
+    }
 
 }

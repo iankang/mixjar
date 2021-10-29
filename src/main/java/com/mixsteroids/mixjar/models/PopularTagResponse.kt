@@ -7,7 +7,12 @@ data class PopularTagResponse (
 
 	@SerializedName("data") val data : List<PopularTagResponseData>,
 	@SerializedName("paging") val paging : PopularTagResponsePaging
-)
+){
+	constructor(popularTagResponse: PopularTagResponse):this(
+		popularTagResponse.data,
+		popularTagResponse.paging
+	)
+}
 
 data class PopularTagResponseData (
 

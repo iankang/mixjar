@@ -7,7 +7,13 @@ data class UserCloudCastResponse (
 	@SerializedName("data") val data : List<UserCloudCastResponseData>,
 	@SerializedName("paging") val paging : UserCloudCastResponsePaging,
 	@SerializedName("name") val name : String
-)
+){
+	constructor(userCloudCastResponse: UserCloudCastResponse):this(
+		userCloudCastResponse.data,
+		userCloudCastResponse.paging,
+		userCloudCastResponse.name
+	)
+}
 
 data class UserCloudCastResponseUser (
 

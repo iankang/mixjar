@@ -25,7 +25,30 @@ data class UserResponse (
 	@SerializedName("picture_primary_color") val picture_primary_color : Int,
 	@SerializedName("type") val type : String,
 	@SerializedName("metadata") val metadata : UserResponseMetadata
-)
+){
+	constructor( userResponse:UserResponse) : this(
+		userResponse.key,
+		userResponse.url,
+		userResponse.name,
+		userResponse.username,
+		userResponse.pictures,
+		userResponse.biog,
+		userResponse.created_time,
+		userResponse.updated_time,
+		userResponse.follower_count,
+		userResponse.following_count,
+		userResponse.cloudcast_count,
+		userResponse.favorite_count,
+		userResponse.listen_count,
+		userResponse.is_pro,
+		userResponse.is_premium,
+		userResponse.city,
+		userResponse.country,
+		userResponse.cover_pictures,
+		userResponse.picture_primary_color,
+		userResponse.type,
+		userResponse.metadata)
+}
 
 data class UserResponsePictures (
 

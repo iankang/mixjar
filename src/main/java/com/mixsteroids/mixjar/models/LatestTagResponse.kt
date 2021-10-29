@@ -7,7 +7,12 @@ data class LatestTagResponse (
 
 	@SerializedName("data") val data : List<LatestTagResponseData>,
 	@SerializedName("paging") val paging : LatestTagResponsePaging
-)
+){
+	constructor(latestTagResponse: LatestTagResponse):this(
+		latestTagResponse.data,
+		latestTagResponse.paging
+	)
+}
 
 data class LatestTagResponseData (
 
