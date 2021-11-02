@@ -16,7 +16,7 @@ Add it in your root build.gradle at the end of repositories:
 Add the dependency
 
 	dependencies {
-	        implementation 'com.github.iankang:mixjar:1.03'
+	        implementation 'com.github.iankang:mixjar:1.0.3'
 	}
 
 ### Implementation Example
