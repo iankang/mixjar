@@ -28,10 +28,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserListensResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserListensResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserPlaylistsResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserPlaylistsResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/Utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/mixjar.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +144,10 @@
       <updated>1629807965229</updated>
       <workItem from="1635307363963" duration="8162000" />
       <workItem from="1635347190719" duration="1793000" />
-      <workItem from="1635432683763" duration="4438000" />
+      <workItem from="1635432683763" duration="4753000" />
+      <workItem from="1635581396012" duration="1011000" />
+      <workItem from="1635851683635" duration="5980000" />
+      <workItem from="1635859690903" duration="2223000" />
     </task>
     <servers />
   </component>
