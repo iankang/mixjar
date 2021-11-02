@@ -10,7 +10,7 @@ import retrofit2.http.Query
 
 interface MixCloudService {
    @GET("{user}/?metadata=1")
-   fun getUser(@Path("user")username:String): Single<UserResponse>
+   fun getUser(@Path("user")username:String): Single<UserResponse?>
 
    @GET("{user}/cloudcasts")
    fun getUserCloudCasts(@Path("user")username: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<UserCloudCastResponse>
