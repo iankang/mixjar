@@ -9,73 +9,161 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface MixCloudService {
-   @GET("{user}/?metadata=1")
-   fun getUser(@Path("user")username:String): Single<UserResponse?>
 
-   @GET("{user}/cloudcasts")
-   fun getUserCloudCasts(@Path("user")username: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<UserCloudCastResponse>
+    fun searchCloudcasts(
 
-   @GET("{user}/comments")
-   fun getUserComments(@Path("user")username: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<UserCommentsResponse>
+    )
 
-   @GET("{user}/favorites")
-   fun getUserFavorites(@Path("user")username: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<UserFavoritesResponse>
+    @GET("{user}/?metadata=1")
+    fun getUser(@Path("user") username: String): Single<UserResponse?>
 
-   @GET("{user}/feed")
-   fun getUserFeed(@Path("user")username: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<UserFeedResponse>
+    @GET("{user}/cloudcasts")
+    fun getUserCloudCasts(
+        @Path("user") username: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<UserCloudCastResponse>
 
-   @GET("{user}/followers")
-   fun getUserFollowers(@Path("user")username: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<UserFollowersResponse>
+    @GET("{user}/comments")
+    fun getUserComments(
+        @Path("user") username: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<UserCommentsResponse>
 
-   @GET("{user}/following")
-   fun getUserFollowing(@Path("user")username: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<UserFollowingResponse>
+    @GET("{user}/favorites")
+    fun getUserFavorites(
+        @Path("user") username: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<UserFavoritesResponse>
 
-   @GET("{user}/listens")
-   fun getUserListens(@Path("user")username: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<UserListensResponse>
+    @GET("{user}/feed")
+    fun getUserFeed(
+        @Path("user") username: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<UserFeedResponse>
 
-   @GET("{user}/playlists")
-   fun getUserPlaylists(@Path("user")username: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<UserPlaylistsResponse>
+    @GET("{user}/followers")
+    fun getUserFollowers(
+        @Path("user") username: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<UserFollowersResponse>
+
+    @GET("{user}/following")
+    fun getUserFollowing(
+        @Path("user") username: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<UserFollowingResponse>
+
+    @GET("{user}/listens")
+    fun getUserListens(
+        @Path("user") username: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<UserListensResponse>
+
+    @GET("{user}/playlists")
+    fun getUserPlaylists(
+        @Path("user") username: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<UserPlaylistsResponse>
 
 
-   @GET("{entertainer}/{showname}/?metadata=1")
-   fun getShow(@Path("entertainer") entertainer:String, @Path("showname") showName:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0): Single<ShowResponse>
+    @GET("{entertainer}/{showname}/?metadata=1")
+    fun getShow(
+        @Path("entertainer") entertainer: String,
+        @Path("showname") showName: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<ShowResponse>
 
-   @GET("{entertainer}/{showname}/favorites/")
-   fun getShowFavorites(@Path("entertainer") entertainer:String, @Path("showname") showName:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0): Single<ShowFavoritesResponse>
+    @GET("{entertainer}/{showname}/favorites/")
+    fun getShowFavorites(
+        @Path("entertainer") entertainer: String,
+        @Path("showname") showName: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<ShowFavoritesResponse>
 
-   @GET("{entertainer}/{showname}/listeners/")
-   fun getShowListeners(@Path("entertainer") entertainer:String, @Path("showname") showName:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<ShowListenersResponse>
+    @GET("{entertainer}/{showname}/listeners/")
+    fun getShowListeners(
+        @Path("entertainer") entertainer: String,
+        @Path("showname") showName: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<ShowListenersResponse>
 
-   @GET("{entertainer}/{showname}/comments/")
-   fun getShowComments(@Path("entertainer") entertainer:String, @Path("showname") showName:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<ShowCommentsResponse>
+    @GET("{entertainer}/{showname}/comments/")
+    fun getShowComments(
+        @Path("entertainer") entertainer: String,
+        @Path("showname") showName: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<ShowCommentsResponse>
 
-   @GET("{entertainer}/{showname}/similar/")
-   fun getShowSimilar(@Path("entertainer") entertainer:String, @Path("showname") showName:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<ShowSimilarResponse>
+    @GET("{entertainer}/{showname}/similar/")
+    fun getShowSimilar(
+        @Path("entertainer") entertainer: String,
+        @Path("showname") showName: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<ShowSimilarResponse>
 
-   @GET("discover/{tag}/?metadata=1")
-   fun getTag(@Path("tag") tag:String):Single<TagResponse>
+    @GET("discover/{tag}/?metadata=1")
+    fun getTag(@Path("tag") tag: String): Single<TagResponse>
 
-   @GET("discover/{tag}/popular/")
-   fun getPopularTag(@Path("tag") tag:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<PopularTagResponse>
+    @GET("discover/{tag}/popular/")
+    fun getPopularTag(
+        @Path("tag") tag: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<PopularTagResponse>
 
-   @GET("discover/{tag}/latest/")
-   fun getLatestTag(@Path("tag") tag:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<LatestTagResponse>
+    @GET("discover/{tag}/latest/")
+    fun getLatestTag(
+        @Path("tag") tag: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<LatestTagResponse>
 
-   @GET("discover/city:{city}/?metadata=1")
-   fun getCity(@Path("city") city:String):Single<CityResponse>
+    @GET("discover/city:{city}/?metadata=1")
+    fun getCity(@Path("city") city: String): Single<CityResponse>
 
-   @GET("discover/city:{city}/popular/")
-   fun getCityPopular(@Path("city") city:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<CityPopularResponse>
+    @GET("discover/city:{city}/popular/")
+    fun getCityPopular(
+        @Path("city") city: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<CityPopularResponse>
 
-   @GET("discover/city:{city}/latest/")
-   fun getCityLatest(@Path("city") city:String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<CityLatestResponse>
+    @GET("discover/city:{city}/latest/")
+    fun getCityLatest(
+        @Path("city") city: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<CityLatestResponse>
 
-   @GET("discover/{tag}+city:{city}/?metadata=1")
-   fun getTagAndCity(@Path("tag")tag:String,@Path("city") city: String):Single<TagAndCityResponse>
+    @GET("discover/{tag}+city:{city}/?metadata=1")
+    fun getTagAndCity(@Path("tag") tag: String, @Path("city") city: String): Single<TagAndCityResponse>
 
-   @GET("discover/{tag}+city:{city}/popular/")
-   fun getTagAndCityPopular(@Path("tag")tag:String,@Path("city") city: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<CityAndTagPopularResponse>
+    @GET("discover/{tag}+city:{city}/popular/")
+    fun getTagAndCityPopular(
+        @Path("tag") tag: String,
+        @Path("city") city: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<CityAndTagPopularResponse>
 
-   @GET("discover/{tag}+city:{city}/latest/")
-   fun getTagAndCityLatest(@Path("tag")tag:String,@Path("city") city: String,@Query("limit")limit:Int = LIMIT_VALUE, @Query("offset")offset:Int = 0):Single<CityAndTagLatestResponse>
+    @GET("discover/{tag}+city:{city}/latest/")
+    fun getTagAndCityLatest(
+        @Path("tag") tag: String,
+        @Path("city") city: String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<CityAndTagLatestResponse>
 }
