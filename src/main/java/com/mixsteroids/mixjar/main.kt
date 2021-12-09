@@ -1,9 +1,9 @@
 package com.mixsteroids.mixjar
 
-fun main(){
+fun main() {
     val mixCloudServiceImpl = MixCloud()
-    val search = mixCloudServiceImpl.search("mc-fullstop","user",0)
-    println(search)
+//    val search = mixCloudServiceImpl.search("mc-fullstop","user",0)
+//    println(search)
 //    val item1 = mixCloudServiceImpl.getShow("spartacus","party-time",1)
 //    val item =  mixCloudServiceImpl.getUser("ian-kangethe")
 //    println("actualItem: ${item?.toString()}")
@@ -17,7 +17,8 @@ fun main(){
 //    mixCloudServiceImpl.getUserFollowing("ndungujan23",2)
 //    mixCloudServiceImpl.getUserListens("ndungujan23",2)
 //    mixCloudServiceImpl.getUserPlaylists("ndungujan23",0)
-//    mixCloudServiceImpl.getShowFavorites("spartacus","party-time",0)
+//    val fav = mixCloudServiceImpl.getShowFavorites("spartacus","party-time",0)
+//    println(fav)
 //    mixCloudServiceImpl.getShowListeners("spartacus","party-time",1)
 //    mixCloudServiceImpl.getShowComments("spartacus","party-time",0)
 //    mixCloudServiceImpl.getShowSimilar("spartacus","party-time",0)
@@ -26,4 +27,10 @@ fun main(){
 //    mixCloudServiceImpl.getPopularTag("dancehall",0)
 //    mixCloudServiceImpl.getTagAndCityPopular("dancehall","nairobi",1)
 //    mixCloudServiceImpl.getTagAndCityLatest("dancehall","nairobi",1)
+//    val follow = mixCloudServiceImpl.followUser("DeejayRigz", "PsPeUhK4H9nKWqm6EFZYzQBzB9KCF2YG")
+//    val repost = mixCloudServiceImpl.repost("spartacus","party-time","PsPeUhK4H9nKWqm6EFZYzQBzB9KCF2YG")
+//    val listenLater = mixCloudServiceImpl.listenLater("spartacus","party-time","PsPeUhK4H9nKWqm6EFZYzQBzB9KCF2YG")
+//    val favorite = mixCloudServiceImpl.favorite("spartacus","party-time","PsPeUhK4H9nKWqm6EFZYzQBzB9KCF2YG")
+
+//    println(favorite)
 }

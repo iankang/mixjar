@@ -5,6 +5,7 @@ import com.mixsteroids.mixjar.models.*
 import com.mixsteroids.mixjar.utils.Mixcloud.LIMIT_VALUE
 import io.reactivex.Single
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -179,4 +180,32 @@ interface MixCloudService {
         @Query("limit") limit: Int = LIMIT_VALUE,
         @Query("offset") offset: Int = 0
     ): Single<CityAndTagLatestResponse>
+
+    @POST("{user}/follow/")
+    fun followUser(
+        @Path("user") user:String,
+        @Query("access_token") accessToken:String
+    ): Single<FollowResponse>
+
+    @POST("{user}/{show}/favorite/")
+    fun favoriting(
+        @Path("user") username: String,
+        @Path("show") showName: String,
+        @Query("access_token") accessToken:String
+    ):Single<FavoritingResponse>
+
+    @POST("{user}/{show}/repost/")
+    fun reposting(
+        @Path("user") username: String,
+        @Path("show") showName: String,
+        @Query("access_token") accessToken:String
+    ):Single<RepostingResponse>
+
+    @POST("{user}/{show}/listen-later/")
+    fun listenLater(
+        @Path("user") username: String,
+        @Path("show") showName: String,
+        @Query("access_token") accessToken:String
+    ):Single<ListenLaterResponse>
+
 }

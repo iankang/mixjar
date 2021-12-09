@@ -124,4 +124,50 @@ class MixCloud() {
         return mixCloudInterface.getTagAndCityLatest(tag, city, page)
     }
 
+    /**
+     * Follows a user
+     * @param username username of person to follow
+     * @param accessToken the authentication access token
+     * @return returns FollowResponse
+     * @see FollowResponse
+     */
+    fun followUser(username: String, accessToken:String): FollowResponse? {
+        return mixCloudInterface.followUser(username, accessToken)
+    }
+
+    /**
+     * Favorites a cloudcast
+     * @param username username of the person whose cloudcast you want to favorite
+     * @param show name of the show you want to favorite.
+     * @param accessToken the authentication access token
+     * @return returns FavoritingResponse
+     * @see FavoritingResponse
+     */
+    fun favorite(username: String, show: String, accessToken: String):FavoritingResponse?{
+        return mixCloudInterface.favoriting(username, show, accessToken)
+    }
+
+    /**
+     * Reposts a cloudcast in your feed
+     * @param username username of the person whose cloudcast you want to reposts
+     * @param show the name of the cloudcast
+     * @param accessToken the authentication access token.
+     * @return RepostingResponse
+     * @see RepostingResponse
+     */
+    fun repost(username: String, show: String, accessToken: String): RepostingResponse?{
+        return mixCloudInterface.reposting(username, show, accessToken)
+    }
+
+    /**
+     * Adds a cloudcast to listen later
+     * @param username username of the person whose cloudcast you want to add to listen later
+     * @param show the name of the show that you want to add to listen later
+     * @param accessToken the authentication access token.
+     * @return ListenLaterResponse
+     * @see ListenLaterResponse
+     */
+    fun listenLater(username: String, show: String, accessToken: String):ListenLaterResponse?{
+        return mixCloudInterface.listenLater(username, show, accessToken)
+    }
 }

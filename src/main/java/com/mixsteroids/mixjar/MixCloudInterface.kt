@@ -4,6 +4,7 @@ import com.mixsteroids.mixjar.models.*
 
 
 interface MixCloudInterface {
+
     fun search(searchString: String?, type:String?, page: Int):SearchResponse?
 
     fun getShow(entertainer:String, show:String,page: Int): ShowResponse?
@@ -51,5 +52,13 @@ interface MixCloudInterface {
     fun getTagAndCityPopular(tag:String, city:String,page: Int):CityAndTagPopularResponse?
 
     fun getTagAndCityLatest(tag:String, city:String,page: Int):CityAndTagLatestResponse?
+
+    fun followUser(username: String, accessToken:String):FollowResponse?
+
+    fun favoriting(username: String, show: String, accessToken: String): FavoritingResponse?
+
+    fun reposting(username: String, show: String, accessToken: String):RepostingResponse?
+
+    fun listenLater(username: String, show: String, accessToken: String):ListenLaterResponse?
 
 }
