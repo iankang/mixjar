@@ -7,11 +7,7 @@
     <list default="true" id="a1972f3f-5662-4c20-ba65-1b43ba360cfb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloud.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloud.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloudInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloudInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/SearchCloudcastResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/SearchCloudcastResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +132,7 @@
       <workItem from="1636348739107" duration="1633000" />
       <workItem from="1636974563275" duration="770000" />
       <workItem from="1638977784021" duration="618000" />
-      <workItem from="1639060916725" duration="3002000" />
+      <workItem from="1639060916725" duration="3737000" />
     </task>
     <servers />
   </component>

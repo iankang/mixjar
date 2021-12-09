@@ -15,15 +15,33 @@ class MixCloud() {
      * @param searchString the search item
      * @param type the type of item being searched could be cloudcast, upload, user or tag
      * @param page this is the offset for paging. it starts at 0.
+     * @return SearchResponse
+     * @see SearchResponse
      */
     fun search(searchString: String?, type:String?, page: Int):SearchResponse?{
         return mixCloudInterface.search(searchString, type, page)
     }
 
+    /**
+     * gets a specific shoe.
+     * @param entertainer name of the entertainer
+     * @param show get the name of the specific show you need
+     * @param page the page offset value.
+     * @return ShowResponse
+     * @see ShowResponse
+     */
     fun getShow(entertainer:String,show:String,page:Int): ShowResponse? {
         return mixCloudInterface.getShow(entertainer, show,page)
     }
 
+    /**
+     * get favorited shows
+     * @param entertainer the name of the entertainer.
+     * @param show the name of the show
+     * @param page the integer offset of the page.
+     * @return ShowFavoriteResponse
+     * @see ShowFavoritesResponse
+     */
     fun getShowFavorites(entertainer: String,show: String,page: Int):ShowFavoritesResponse?{
         return mixCloudInterface.getShowFavorites(entertainer, show, page)
     }
@@ -40,7 +58,10 @@ class MixCloud() {
         return mixCloudInterface.getShowSimilar(entertainer, show, page)
     }
 
-
+    /**
+     * gets user info
+     * @param username the username of the user you want details of
+     */
     fun getUser(username:String): UserResponse? {
         return mixCloudInterface.getUser(username)
     }

@@ -21,9 +21,15 @@ interface MixCloudService {
         @Query("offset") offset: Int = 0
     ): Single<SearchResponse?>
 
+
     @GET("{user}/?metadata=1")
     fun getUser(@Path("user") username: String): Single<UserResponse?>
 
+    /**
+     * gets Users uploaded mixes known as cloudcasts.
+     * @param username username of the user from whom you want their uploads.
+     *
+     */
     @GET("{user}/cloudcasts")
     fun getUserCloudCasts(
         @Path("user") username: String,
