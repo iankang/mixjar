@@ -1,9 +1,14 @@
 package com.mixsteroids.mixjar.models
 
-data class SearchCloudcastResponse(
+data class SearchResponse(
     var data: List<Data>? = null,
     var paging: Paging? = null
-)
+){
+    constructor(searchCloudcastResponse: SearchResponse?):this(
+        searchCloudcastResponse?.data,
+        searchCloudcastResponse?.paging
+    )
+}
 
 data class Data(
     var audioLength: Int? = null,
@@ -21,41 +26,81 @@ data class Data(
     var updatedTime: String? = null,
     var url: String? = null,
     var user: User? = null
-)
+){
+    constructor(data: Data?):this(
+        data?.audioLength,
+        data?.commentCount,
+        data?.createdTime,
+        data?.favoriteCount,
+        data?.key,
+        data?.listenerCount,
+        data?.name,
+        data?.pictures,
+        data?.playCount,
+        data?.repostCount,
+        data?.slug,
+        data?.tags,
+        data?.updatedTime,
+        data?.url,
+        data?.user
+    )
+}
 
 data class Paging(
     var next: String? = null
-)
+){
+    constructor(paging: Paging?):this(
+        paging?.next
+    )
+}
 
 data class Pictures(
-    var `1024wx1024h`: String? = null,
-    var `320wx320h`: String? = null,
-    var `640wx640h`: String? = null,
-    var `768wx768h`: String? = null,
     var extraLarge: String? = null,
     var large: String? = null,
     var medium: String? = null,
     var mediumMobile: String? = null,
     var small: String? = null,
     var thumbnail: String? = null
-)
+){
+    constructor(pictures: Pictures?):this(
+        pictures?.extraLarge,
+        pictures?.large,
+        pictures?.medium,
+        pictures?.mediumMobile,
+        pictures?.small,
+        pictures?.thumbnail
+    )
+}
 
 data class PicturesX(
-    var `320wx320h`: String? = null,
-    var `640wx640h`: String? = null,
     var extraLarge: String? = null,
     var large: String? = null,
     var medium: String? = null,
     var mediumMobile: String? = null,
     var small: String? = null,
     var thumbnail: String? = null
-)
+){
+    constructor(pictures: PicturesX?):this(
+        pictures?.extraLarge,
+        pictures?.large,
+        pictures?.medium,
+        pictures?.mediumMobile,
+        pictures?.small,
+        pictures?.thumbnail
+    )
+}
 
 data class Tag(
     var key: String? = null,
     var name: String? = null,
     var url: String? = null
-)
+){
+    constructor(tag: Tag?):this(
+        tag?.key,
+        tag?.name,
+        tag?.url
+    )
+}
 
 data class User(
     var key: String? = null,
@@ -63,4 +108,12 @@ data class User(
     var pictures: PicturesX? = null,
     var url: String? = null,
     var username: String? = null
-)
+){
+    constructor(user: User?):this(
+        user?.key,
+        user?.name,
+        user?.pictures,
+        user?.url,
+        user?.username
+    )
+}

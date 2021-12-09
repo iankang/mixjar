@@ -10,6 +10,16 @@ class MixCloud() {
         mixCloudInterface = MixCloudServiceImpl()
     }
 
+    /**
+     * search the mixcloud api
+     * @param searchString the search item
+     * @param type the type of item being searched could be cloudcast, upload, user or tag
+     * @param page this is the offset for paging. it starts at 0.
+     */
+    fun search(searchString: String?, type:String?, page: Int):SearchResponse?{
+        return mixCloudInterface.search(searchString, type, page)
+    }
+
     fun getShow(entertainer:String,show:String,page:Int): ShowResponse? {
         return mixCloudInterface.getShow(entertainer, show,page)
     }

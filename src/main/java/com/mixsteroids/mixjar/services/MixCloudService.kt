@@ -9,10 +9,17 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface MixCloudService {
-
-    fun searchCloudcasts(
-
-    )
+    /**
+     * @param searchString the searchstring you want to find
+     * @param
+     */
+    @GET("search/")
+    fun search(
+        @Query("q") searchString: String?,
+        @Query("type") type: String? = "cloudcast",
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<SearchResponse?>
 
     @GET("{user}/?metadata=1")
     fun getUser(@Path("user") username: String): Single<UserResponse?>

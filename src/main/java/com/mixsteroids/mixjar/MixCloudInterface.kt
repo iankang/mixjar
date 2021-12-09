@@ -4,6 +4,8 @@ import com.mixsteroids.mixjar.models.*
 
 
 interface MixCloudInterface {
+    fun search(searchString: String?, type:String?, page: Int):SearchResponse?
+
     fun getShow(entertainer:String, show:String,page: Int): ShowResponse?
 
     fun getShowFavorites(entertainer:String, show:String,page:Int): ShowFavoritesResponse?

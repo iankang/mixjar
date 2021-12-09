@@ -9,6 +9,19 @@ import retrofit2.create
 class MixCloudServiceImpl : MixCloudInterface {
     private val network = Network()
     private val mixCloudApi = network.getMixCloudRetrofitInstance().create<MixCloudService>()
+    override fun search(searchString: String?, type: String?, page: Int): SearchResponse? {
+        val searchCall = mixCloudApi.search(searchString, type, offset = getOffsetFromPage(page)!!)
+        var searchResponse: SearchResponse? = null
+        searchCall.subscribe { searchResponseZ,throwable ->
+            if(throwable == null){
+                searchResponse = SearchResponse(searchResponseZ)
+            }else{
+                println(throwable.message)
+            }
+        }
+        return searchResponse
+    }
+
 
     override fun getShow(entertainer: String, show: String, page: Int): ShowResponse? {
         val showCall = mixCloudApi.getShow(entertainer, show, offset = getOffsetFromPage(page)!!)

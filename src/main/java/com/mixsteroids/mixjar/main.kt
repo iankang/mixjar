@@ -2,6 +2,8 @@ package com.mixsteroids.mixjar
 
 fun main(){
     val mixCloudServiceImpl = MixCloud()
+    val search = mixCloudServiceImpl.search("mc-fullstop","user",0)
+    println(search)
 //    val item1 = mixCloudServiceImpl.getShow("spartacus","party-time",1)
 //    val item =  mixCloudServiceImpl.getUser("ian-kangethe")
 //    println("actualItem: ${item?.toString()}")
