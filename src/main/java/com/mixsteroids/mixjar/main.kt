@@ -2,6 +2,7 @@ package com.mixsteroids.mixjar
 
 fun main() {
     val mixCloudServiceImpl = MixCloud()
+    val hearThisAt = HearThisAt()
 //    val search = mixCloudServiceImpl.search("mc-fullstop","user",0)
 //    println(search)
 //    val item1 = mixCloudServiceImpl.getShow("spartacus","party-time",1)
@@ -33,4 +34,19 @@ fun main() {
 //    val favorite = mixCloudServiceImpl.favorite("spartacus","party-time","PsPeUhK4H9nKWqm6EFZYzQBzB9KCF2YG")
 
 //    print(favorite)
+
+//    val feed = hearThisAt.getFeed(0,20,10,null,null, "2021-05-05","2021-12-12")
+//    val genres = hearThisAt.getAllGenres()
+//    println(genres?.size)
+//    val genreList = hearThisAt.getGenreList("Acoustic",0,10)
+//    println(genreList)
+//    val artist = hearThisAt.getSingleArtist("shawne")
+//    println(artist)
+//    val artistsList = hearThisAt.getArtistsLists("shawne","likes",0,18)
+//    println(artistsList)
+//    val track = hearThisAt.getSingleTrack("shawne","shawne-back-to-the-roots-2-05072014")
+//    println(track)
+    val playlist = hearThisAt.getSinglePlaylist("shawne","playlists",1,5)
+    println(playlist)
+
 }

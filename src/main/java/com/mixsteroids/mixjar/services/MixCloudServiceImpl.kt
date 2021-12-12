@@ -1,12 +1,11 @@
 package com.mixsteroids.mixjar.services
 
-import com.mixsteroids.mixjar.MixCloudInterface
+import com.mixsteroids.mixjar.services.contracts.MixCloudInterface
 import com.mixsteroids.mixjar.models.*
 
 import com.mixsteroids.mixjar.network.Network
 import org.slf4j.LoggerFactory
 import retrofit2.create
-import java.util.logging.Logger
 
 class MixCloudServiceImpl : MixCloudInterface {
 

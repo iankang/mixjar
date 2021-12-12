@@ -3,6 +3,7 @@ package com.mixsteroids.mixjar.network
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.mixsteroids.mixjar.utils.Mixcloud.BASE_URL
+import com.mixsteroids.mixjar.utils.Mixcloud.HEARTHISAT_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -43,5 +44,14 @@ class Network {
             .client(getOkHttpClient())
             .build()
 
+    }
+
+    fun getHearThisAtRetrofitInstance():Retrofit{
+        return Retrofit.Builder()
+            .baseUrl(HEARTHISAT_URL)
+            .addConverterFactory(GsonConverterFactory.create(getGson()))
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .client(getOkHttpClient())
+            .build()
     }
 }

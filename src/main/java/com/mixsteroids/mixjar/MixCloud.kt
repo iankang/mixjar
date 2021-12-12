@@ -2,9 +2,10 @@ package com.mixsteroids.mixjar
 
 import com.mixsteroids.mixjar.models.*
 import com.mixsteroids.mixjar.services.MixCloudServiceImpl
+import com.mixsteroids.mixjar.services.contracts.MixCloudInterface
 
 class MixCloud() {
-    val mixCloudInterface:MixCloudInterface
+    val mixCloudInterface: MixCloudInterface
 
     init {
         mixCloudInterface = MixCloudServiceImpl()
@@ -32,6 +33,18 @@ class MixCloud() {
      */
     fun getShow(entertainer:String,show:String,page:Int): ShowResponse? {
         return mixCloudInterface.getShow(entertainer, show,page)
+    }
+    /**
+     * gets a specific shoe.
+     * @param entertainer name of the entertainer
+     * @param show get the name of the specific show you need
+     * @param limit no of pages to load
+     * @param page the page offset value.
+     * @return ShowResponse
+     * @see ShowResponse
+     */
+    fun getShow(entertainer:String,show:String,limit: Int,page:Int): ShowResponse? {
+        return mixCloudInterface.getShow(entertainer, show,limit,page)
     }
 
     /**

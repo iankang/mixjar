@@ -1,4 +1,4 @@
-package com.mixsteroids.mixjar
+package com.mixsteroids.mixjar.services.contracts
 
 import com.mixsteroids.mixjar.models.*
 
