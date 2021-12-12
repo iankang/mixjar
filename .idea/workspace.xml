@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1972f3f-5662-4c20-ba65-1b43ba360cfb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/FavoritingResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/FollowResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ListenLaterResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/RepostingResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloud.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloud.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloudInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloudInterface.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +135,10 @@
       <workItem from="1636974563275" duration="770000" />
       <workItem from="1638977784021" duration="618000" />
       <workItem from="1639060916725" duration="3737000" />
-      <workItem from="1639084797263" duration="3637000" />
+      <workItem from="1639084797263" duration="4134000" />
+      <workItem from="1639122449465" duration="1305000" />
+      <workItem from="1639274375321" duration="3465000" />
+      <workItem from="1639278253857" duration="1934000" />
     </task>
     <servers />
   </component>

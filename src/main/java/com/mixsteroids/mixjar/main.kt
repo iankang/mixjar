@@ -17,7 +17,7 @@ fun main() {
 //    mixCloudServiceImpl.getUserFollowing("ndungujan23",2)
 //    mixCloudServiceImpl.getUserListens("ndungujan23",2)
 //    mixCloudServiceImpl.getUserPlaylists("ndungujan23",0)
-//    val fav = mixCloudServiceImpl.getShowFavorites("spartacus","party-time",0)
+//    val fav = mixCloudServiceImpl.getShowFavorites("spartacus","party-time",8, 0)
 //    println(fav)
 //    mixCloudServiceImpl.getShowListeners("spartacus","party-time",1)
 //    mixCloudServiceImpl.getShowComments("spartacus","party-time",0)
@@ -32,5 +32,5 @@ fun main() {
 //    val listenLater = mixCloudServiceImpl.listenLater("spartacus","party-time","PsPeUhK4H9nKWqm6EFZYzQBzB9KCF2YG")
 //    val favorite = mixCloudServiceImpl.favorite("spartacus","party-time","PsPeUhK4H9nKWqm6EFZYzQBzB9KCF2YG")
 
-//    println(favorite)
+//    print(favorite)
 }
