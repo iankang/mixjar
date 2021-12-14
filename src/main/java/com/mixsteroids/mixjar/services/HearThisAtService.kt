@@ -3,6 +3,7 @@ package com.mixsteroids.mixjar.services
 import com.mixsteroids.mixjar.models.*
 import io.reactivex.Single
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -58,4 +59,12 @@ interface HearThisAtService {
         @Query("page") page: Int?,
         @Query("count") count: Int?
     ):Single<SinglePlaylist>
+
+    fun Search(
+        @Query("type") type:String,
+        @Query("t") t:String,
+        @Query("page") page:Int?,
+        @Query("count")count:Int?,
+        @Query("duration") duration:Int?
+    ):Single<HearthisAtSearchResponse>
 }

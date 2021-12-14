@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1972f3f-5662-4c20-ba65-1b43ba360cfb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/HearThisAt.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/ArtistListResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/GenreList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/HearThisAtGenresResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/HearthisAtFeedResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/SingleArtistResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/SinglePlaylist.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/SingleTrackResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/UserX.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/HearThisAtService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/HearThisAtServiceImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/contracts/HearThisAtInterface.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/HearthisAtSearchResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloud.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloud.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/MixCloudInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/contracts/MixCloudInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/network/Network.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/network/Network.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/utils/CONSTANTS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/utils/CONSTANTS.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/HearThisAtService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/HearThisAtService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +138,7 @@
       <workItem from="1639122449465" duration="1305000" />
       <workItem from="1639274375321" duration="3465000" />
       <workItem from="1639278253857" duration="14187000" />
+      <workItem from="1639496885559" duration="1836000" />
     </task>
     <servers />
   </component>
