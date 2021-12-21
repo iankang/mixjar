@@ -113,5 +113,31 @@ class HearThisAtServiceImpl: HearThisAtInterface {
         return singlePlaylistResponse
     }
 
+    override fun search(type: String, t: String, page: Int?, count: Int?, duration: Int?): HearthisAtSearchResponse? {
+        val searchCall = hearThisAtApi.Search(type, t, page, count, duration)
+        var searchResponse:HearthisAtSearchResponse? = null
+        searchCall.subscribe { search,throwable ->
+            if(throwable == null){
+                searchResponse =  search
+            }else{
+                LOGGER.error(throwable.message)
+            }
+        }
+        return searchResponse
+    }
+
+    override fun login(email: String, password: String): HearthisatLoginResponse? {
+        val loginCall = hearThisAtApi.login(email, password)
+        var loginResponse:HearthisatLoginResponse? = null
+        loginCall.subscribe { login, throwable ->
+            if(throwable == null){
+                loginResponse = login
+            }else{
+                LOGGER.error(throwable.message)
+            }
+        }
+        return loginResponse
+    }
+
 
 }

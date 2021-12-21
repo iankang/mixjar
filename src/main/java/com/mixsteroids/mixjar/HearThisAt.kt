@@ -120,4 +120,38 @@ class HearThisAt {
     ):SinglePlaylist?{
         return  hearThisAtInterface.getSinglePlaylist(artistName, types, page, count)
     }
+
+    /**
+     * search hearthisat repo
+     * @param type 	tracks (or empty) / user / playlists
+     * @param t search query
+     * @param page page to show
+     * @param count entries per page (max: 20)
+     * @param duration duration (+/- 5 minutes)
+     * @return HearthisatSearchResponse
+     * @see HearthisAtSearchResponse
+     */
+    fun search(
+        type:String,
+        t:String,
+        page:Int?,
+        count:Int?,
+        duration:Int?
+    ):HearthisAtSearchResponse?{
+        return hearThisAtInterface.search(type, t, page, count, duration)
+    }
+
+    /**
+     * login into hearthisat.
+     * @param email email address to login
+     * @param password password address to login
+     * @return HearthisatLoginResponse
+     * @see HearthisatLoginResponse
+     */
+    fun login(
+        email:String,
+        password:String
+    ): HearthisatLoginResponse?{
+        return hearThisAtInterface.login(email, password)
+    }
 }

@@ -1,9 +1,7 @@
 package com.mixsteroids.mixjar.services.contracts
 
 import com.mixsteroids.mixjar.models.*
-import io.reactivex.Single
-import retrofit2.http.Path
-import retrofit2.http.Query
+
 
 interface HearThisAtInterface {
 
@@ -15,21 +13,21 @@ interface HearThisAtInterface {
         category: String?,
         showFeedStart:String,
         showFeedEnd:String
-    ):HearthisAtFeedResponse?
+    ): HearthisAtFeedResponse?
 
 
-    fun getAllGenres():HearThisAtGenresResponse?
+    fun getAllGenres(): HearThisAtGenresResponse?
 
     fun getGenreList(
      categoryName:String,
      page: Int,
      count:Int,
      duration: Int?
-    ):GenreList?
+    ): GenreList?
 
     fun getSingleArtist(
         artistName:String
-    ):SingleArtistResponse?
+    ): SingleArtistResponse?
 
     fun getArtistsList(
         artistName: String,
@@ -49,4 +47,17 @@ interface HearThisAtInterface {
         page: Int?,
         count: Int?
     ):SinglePlaylist?
+
+    fun search(
+        type:String,
+        t:String,
+        page:Int?,
+        count:Int?,
+        duration:Int?
+    ):HearthisAtSearchResponse?
+
+    fun login(
+        email:String,
+        password:String
+    ):HearthisatLoginResponse?
 }

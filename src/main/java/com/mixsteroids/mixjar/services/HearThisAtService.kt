@@ -60,6 +60,7 @@ interface HearThisAtService {
         @Query("count") count: Int?
     ):Single<SinglePlaylist>
 
+    @GET("search")
     fun Search(
         @Query("type") type:String,
         @Query("t") t:String,
@@ -67,4 +68,10 @@ interface HearThisAtService {
         @Query("count")count:Int?,
         @Query("duration") duration:Int?
     ):Single<HearthisAtSearchResponse>
+
+    @POST("login")
+    fun login(
+        @Query("email") email:String,
+        @Query("password") password:String
+    ):Single<HearthisatLoginResponse>
 }

@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1972f3f-5662-4c20-ba65-1b43ba360cfb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/HearthisAtSearchResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/HearthisatLoginResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/HearThisAt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/HearThisAt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/HearthisAtFeedResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models/HearthisAtFeedResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/HearThisAtService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/HearThisAtService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/HearThisAtServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/HearThisAtServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/contracts/HearThisAtInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/contracts/HearThisAtInterface.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +36,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1xAptIK3LcWBGi8MCDeW9gJI9Ji" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -51,7 +63,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -138,7 +150,9 @@
       <workItem from="1639122449465" duration="1305000" />
       <workItem from="1639274375321" duration="3465000" />
       <workItem from="1639278253857" duration="14187000" />
-      <workItem from="1639496885559" duration="1836000" />
+      <workItem from="1639496885559" duration="1886000" />
+      <workItem from="1640097719738" duration="9374000" />
+      <workItem from="1640109142051" duration="3135000" />
     </task>
     <servers />
   </component>

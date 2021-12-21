@@ -1,6 +1,6 @@
 package com.mixsteroids.mixjar.models
 
-class HearthisAtFeedResponse() : ArrayList<HearthisAtFeedResponseItem>()
+class HearthisAtFeedResponse : ArrayList<HearthisAtFeedResponseItem>()
 
 
 data class HearthisAtFeedResponseItem(
