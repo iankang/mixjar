@@ -22,7 +22,7 @@ data class ShowResponse (
 	@SerializedName("audio_length") val audio_length : Int?,
 	@SerializedName("description") val description : String?,
 	@SerializedName("sections") val sections : List<String?>?,
-	@SerializedName("picture_primary_color") val picture_primary_color : String?,
+	@SerializedName("picture_primary_color") val picture_primary_color : Int?,
 	@SerializedName("type") val type : String?,
 	@SerializedName("metadata") val metadata : ShowResponseMetadata?
 ){

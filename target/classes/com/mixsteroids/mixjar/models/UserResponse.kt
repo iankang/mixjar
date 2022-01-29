@@ -22,7 +22,7 @@ data class UserResponse(
 	@SerializedName("city") val city: String?,
 	@SerializedName("country") val country: String?,
 	@SerializedName("cover_pictures") val cover_pictures: UserResponseCoverPictures?,
-	@SerializedName("picture_primary_color") val picture_primary_color: String?,
+	@SerializedName("picture_primary_color") val picture_primary_color: Int?,
 	@SerializedName("type") val type: String?,
 	@SerializedName("metadata") val metadata: UserResponseMetadata?
 ){
