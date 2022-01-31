@@ -119,6 +119,7 @@ class HearThisAtServiceImpl: HearThisAtInterface {
         searchCall.subscribe { search,throwable ->
             if(throwable == null){
                 searchResponse =  search
+
             }else{
                 LOGGER.error(throwable.message)
             }

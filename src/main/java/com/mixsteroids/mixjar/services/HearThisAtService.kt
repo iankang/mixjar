@@ -18,11 +18,11 @@ interface HearThisAtService {
         @Query("category") category: String?,
         @Query("show-feed-start") showFeedStart: String,
         @Query("show-feed-end") showFeedEnd: String
-    ): Single<HearthisAtFeedResponse>
+    ): Single<HearthisAtFeedResponse?>
 
 
     @GET("/categories")
-    fun getAllGenres(): Single<HearThisAtGenresResponse>
+    fun getAllGenres(): Single<HearThisAtGenresResponse?>
 
     @GET("categories/{categoryName}")
     fun getGenreList(
@@ -30,12 +30,12 @@ interface HearThisAtService {
         @Query("page") page: Int,
         @Query("count") count: Int,
         @Query("duration") duration: Int?
-    ): Single<GenreList>
+    ): Single<GenreList?>
 
     @GET("{artistName}")
     fun getSingleArtist(
         @Path("artistName") artistName: String
-    ): Single<SingleArtistResponse>
+    ): Single<SingleArtistResponse?>
 
 
     @GET("{artistName}/")
@@ -44,13 +44,13 @@ interface HearThisAtService {
         @Query("type") type: String?,
         @Query("page") page:Int?,
         @Query("count") count: Int?
-    ):Single<ArtistListResponse>
+    ):Single<ArtistListResponse?>
 
     @GET("{artistName}/{trackName}")
     fun getSingleTrack(
         @Path("artistName") artistName:String,
         @Path("trackName") trackName:String
-    ):Single<SingleTrackResponse>
+    ):Single<SingleTrackResponse?>
 
     @GET("{artistName}/")
     fun getSinglePlaylist(
@@ -58,7 +58,7 @@ interface HearThisAtService {
         @Query("type") type:String,
         @Query("page") page: Int?,
         @Query("count") count: Int?
-    ):Single<SinglePlaylist>
+    ):Single<SinglePlaylist?>
 
     @GET("search")
     fun Search(
@@ -67,11 +67,11 @@ interface HearThisAtService {
         @Query("page") page:Int?,
         @Query("count")count:Int?,
         @Query("duration") duration:Int?
-    ):Single<HearthisAtSearchResponse>
+    ):Single<HearthisAtSearchResponse?>
 
     @POST("login")
     fun login(
         @Query("email") email:String,
         @Query("password") password:String
-    ):Single<HearthisatLoginResponse>
+    ):Single<HearthisatLoginResponse?>
 }

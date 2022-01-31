@@ -48,7 +48,7 @@ fun main() {
 //    println(track)
 //    val playlist = hearThisAt.getSinglePlaylist("shawne","playlists",1,5)
 //    println(playlist)
-//    val search = hearThisAt.search("","shawne",1, 5,null)
+//    val search = hearThisAt.search("","ajlfasjdflkas",1, 5,null)
 //    println(search)
 //    val login = hearThisAt.login("ianngech@yahoo.com","kangethe")
 //    println(login)
