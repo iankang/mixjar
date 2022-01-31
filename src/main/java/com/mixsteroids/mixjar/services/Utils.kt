@@ -1,7 +1,5 @@
 package com.mixsteroids.mixjar.services
 
-import com.mixsteroids.mixjar.models.UserResponse
-import io.reactivex.Single
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -25,9 +23,6 @@ fun <T : Any?> executeRequest(call: Call<T>): T? {
     })
     return item?.t
 }
-
-
-
 
 
 fun getOffsetFromPage(page: Int): Int? {

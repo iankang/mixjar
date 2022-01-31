@@ -1,7 +1,5 @@
 package com.mixsteroids.mixjar.models
 import com.google.gson.annotations.SerializedName
-
-
 data class UserResponse(
 
 	@SerializedName("key") val key: String?,

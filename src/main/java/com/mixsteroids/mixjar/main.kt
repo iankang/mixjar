@@ -5,14 +5,18 @@ fun main() {
     val hearThisAt = HearThisAt()
 //    val search = mixCloudServiceImpl.search("mc-fullstop","user",0)
 //    println(search)
-//    val item1 = mixCloudServiceImpl.getShow("spartacus","party-time",1)
+    //exclusive
+//    val item1 = mixCloudServiceImpl.getShow("DJ_Jukess","thehypeaugust-nsg-vs-wstrn-mix-dj_jukess")
+
+    val item1 = mixCloudServiceImpl.getShow("mixmastermorris","mixmaster-morris-steinski-new-york")
 //    val item =  mixCloudServiceImpl.getUser("ian-kangethe")
 //    println("actualItem: ${item?.toString()}")
-//    println("getShow: $item1")
+    println("getShow: $item1")
 //    val item = mixCloudServiceImpl.getUserFeed("ian-kangethe",1)
-//    mixCloudServiceImpl.getUserCloudCast("DjChief254",2)
+//    val cloud = mixCloudServiceImpl.getUserCloudCast("The_Fixx",0)
+//    println(cloud)
 //    mixCloudServiceImpl.getCity("nairobi");
-//    mixCloudServiceImpl.getUserFeed("ndungujan23",3)
+//    mixCloudServiceImpl.getUserFeed("ndungujan23",3)F
 //    mixCloudServiceImpl.getUserComments("ndungujan23",0)
 //    mixCloudServiceImpl.getUserFollowers("ndungujan23",0)
 //    mixCloudServiceImpl.getUserFollowing("ndungujan23",2)

@@ -31,20 +31,8 @@ class MixCloud() {
      * @return ShowResponse
      * @see ShowResponse
      */
-    fun getShow(entertainer:String,show:String,page:Int): ShowResponse? {
-        return mixCloudInterface.getShow(entertainer, show,page)
-    }
-    /**
-     * gets a specific shoe.
-     * @param entertainer name of the entertainer
-     * @param show get the name of the specific show you need
-     * @param limit no of pages to load
-     * @param page the page offset value.
-     * @return ShowResponse
-     * @see ShowResponse
-     */
-    fun getShow(entertainer:String,show:String,limit: Int,page:Int): ShowResponse? {
-        return mixCloudInterface.getShow(entertainer, show,limit,page)
+    fun getShow(entertainer:String,show:String): ShowResponse? {
+        return mixCloudInterface.getShow(entertainer, show)
     }
 
     /**

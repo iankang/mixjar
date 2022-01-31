@@ -9,9 +9,7 @@ interface MixCloudInterface {
 
     fun search(searchString: String?, type:String?,limit:Int, page: Int):SearchResponse?
 
-    fun getShow(entertainer:String, show:String,page: Int): ShowResponse?
-
-    fun getShow(entertainer:String, show:String,linit:Int,page: Int): ShowResponse?
+    fun getShow(entertainer:String, show:String): ShowResponse?
 
     fun getShowFavorites(entertainer:String, show:String,page:Int): ShowFavoritesResponse?
 

@@ -1,9 +1,8 @@
 package com.mixsteroids.mixjar.services
 
-import com.mixsteroids.mixjar.services.contracts.MixCloudInterface
 import com.mixsteroids.mixjar.models.*
-
 import com.mixsteroids.mixjar.network.Network
+import com.mixsteroids.mixjar.services.contracts.MixCloudInterface
 import org.slf4j.LoggerFactory
 import retrofit2.create
 
@@ -17,10 +16,10 @@ class MixCloudServiceImpl : MixCloudInterface {
     override fun search(searchString: String?, type: String?, page: Int): SearchResponse? {
         val searchCall = mixCloudApi.search(searchString, type, offset = getOffsetFromPage(page)!!)
         var searchResponse: SearchResponse? = null
-        searchCall.subscribe { searchResponseZ,throwable ->
-            if(throwable == null){
+        searchCall.subscribe { searchResponseZ, throwable ->
+            if (throwable == null) {
                 searchResponse = SearchResponse(searchResponseZ)
-            }else{
+            } else {
                 println(throwable.message)
             }
         }
@@ -28,39 +27,25 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun search(searchString: String?, type: String?, limit: Int, page: Int): SearchResponse? {
-        val searchCall = mixCloudApi.search(searchString, type, limit= limit,offset = getOffsetFromPage(page)!!)
+        val searchCall = mixCloudApi.search(searchString, type, limit = limit, offset = getOffsetFromPage(page)!!)
         var searchResponse: SearchResponse? = null
-        searchCall.subscribe { searchResponseZ,throwable ->
-            if(throwable == null){
+        searchCall.subscribe { searchResponseZ, throwable ->
+            if (throwable == null) {
                 searchResponse = SearchResponse(searchResponseZ)
-            }else{
+            } else {
                 println(throwable.message)
             }
         }
         return searchResponse
     }
 
-
-    override fun getShow(entertainer: String, show: String, page: Int): ShowResponse? {
+    override fun getShow(entertainer: String, show: String): ShowResponse? {
         val showCall = mixCloudApi.getShow(entertainer, show)
-        var showResponseRx:ShowResponse? = null
+        var showResponseRx: ShowResponse? = null
         showCall.subscribe { showResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 showResponseRx = ShowResponse(showResponse)
-            }else{
-                println(throwable.message)
-            }
-        }
-        return showResponseRx
-    }
-
-    override fun getShow(entertainer: String, show: String, linit: Int, page: Int): ShowResponse? {
-        val showCall = mixCloudApi.getShow(entertainer, show)
-        var showResponseRx:ShowResponse? = null
-        showCall.subscribe { showResponse, throwable ->
-            if(throwable == null) {
-                showResponseRx = ShowResponse(showResponse)
-            }else{
+            } else {
                 println(throwable.message)
             }
         }
@@ -69,11 +54,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getShowFavorites(entertainer: String, show: String, page: Int): ShowFavoritesResponse? {
         val showFavoritesCall = mixCloudApi.getShowFavorites(entertainer, show, offset = getOffsetFromPage(page)!!)
-        var showFavoritesRx:ShowFavoritesResponse? = null
+        var showFavoritesRx: ShowFavoritesResponse? = null
         showFavoritesCall.subscribe { showFavoritesResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 showFavoritesRx = ShowFavoritesResponse(showFavoritesResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -81,12 +66,13 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getShowFavorites(entertainer: String, show: String, limit: Int, page: Int): ShowFavoritesResponse? {
-        val showFavoritesCall = mixCloudApi.getShowFavorites(entertainer, show,limit= limit, offset = getOffsetFromPage(page)!!)
-        var showFavoritesRx:ShowFavoritesResponse? = null
+        val showFavoritesCall =
+            mixCloudApi.getShowFavorites(entertainer, show, limit = limit, offset = getOffsetFromPage(page)!!)
+        var showFavoritesRx: ShowFavoritesResponse? = null
         showFavoritesCall.subscribe { showFavoritesResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 showFavoritesRx = ShowFavoritesResponse(showFavoritesResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -95,11 +81,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getShowListeners(entertainer: String, show: String, page: Int): ShowListenersResponse? {
         val showListenersCall = mixCloudApi.getShowListeners(entertainer, show, offset = getOffsetFromPage(page)!!)
-        var showListenersRx:ShowListenersResponse? = null
+        var showListenersRx: ShowListenersResponse? = null
         showListenersCall.subscribe { showListenersResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 showListenersRx = ShowListenersResponse(showListenersResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -107,12 +93,13 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getShowListeners(entertainer: String, show: String, limit: Int, page: Int): ShowListenersResponse? {
-        val showListenersCall = mixCloudApi.getShowListeners(entertainer, show,limit= limit, offset = getOffsetFromPage(page)!!)
-        var showListenersRx:ShowListenersResponse? = null
+        val showListenersCall =
+            mixCloudApi.getShowListeners(entertainer, show, limit = limit, offset = getOffsetFromPage(page)!!)
+        var showListenersRx: ShowListenersResponse? = null
         showListenersCall.subscribe { showListenersResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 showListenersRx = ShowListenersResponse(showListenersResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -121,11 +108,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getShowComments(entertainer: String, show: String, page: Int): ShowCommentsResponse? {
         val showCommentsCall = mixCloudApi.getShowComments(entertainer, show, offset = getOffsetFromPage(page)!!)
-        var showCommentsResponseRx:ShowCommentsResponse? = null
+        var showCommentsResponseRx: ShowCommentsResponse? = null
         showCommentsCall.subscribe { showCommentsResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 showCommentsResponseRx = ShowCommentsResponse(showCommentsResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -133,12 +120,13 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getShowComments(entertainer: String, show: String, limit: Int, page: Int): ShowCommentsResponse? {
-        val showCommentsCall = mixCloudApi.getShowComments(entertainer, show,limit= limit, offset = getOffsetFromPage(page)!!)
-        var showCommentsResponseRx:ShowCommentsResponse? = null
+        val showCommentsCall =
+            mixCloudApi.getShowComments(entertainer, show, limit = limit, offset = getOffsetFromPage(page)!!)
+        var showCommentsResponseRx: ShowCommentsResponse? = null
         showCommentsCall.subscribe { showCommentsResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 showCommentsResponseRx = ShowCommentsResponse(showCommentsResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -147,11 +135,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getShowSimilar(entertainer: String, show: String, page: Int): ShowSimilarResponse? {
         val showSimilarCall = mixCloudApi.getShowSimilar(entertainer, show, offset = getOffsetFromPage(page)!!)
-        var showSimilarResponseRx:ShowSimilarResponse? = null
+        var showSimilarResponseRx: ShowSimilarResponse? = null
         showSimilarCall.subscribe { showSimilarResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 showSimilarResponseRx = ShowSimilarResponse(showSimilarResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -159,12 +147,13 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getShowSimilar(entertainer: String, show: String, limit: Int, page: Int): ShowSimilarResponse? {
-        val showSimilarCall = mixCloudApi.getShowSimilar(entertainer, show,limit = limit, offset = getOffsetFromPage(page)!!)
-        var showSimilarResponseRx:ShowSimilarResponse? = null
+        val showSimilarCall =
+            mixCloudApi.getShowSimilar(entertainer, show, limit = limit, offset = getOffsetFromPage(page)!!)
+        var showSimilarResponseRx: ShowSimilarResponse? = null
         showSimilarCall.subscribe { showSimilarResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 showSimilarResponseRx = ShowSimilarResponse(showSimilarResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -173,11 +162,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getUser(username: String): UserResponse? {
         val userCall = mixCloudApi.getUser(username)
-        var userResponselocal:UserResponse? = null
+        var userResponselocal: UserResponse? = null
         userCall.subscribe { userResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userResponselocal = UserResponse(userResponse)
-            }else{
+            } else {
                 throw Error(throwable.message)
             }
         }
@@ -186,11 +175,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getUserCloudCasts(username: String, page: Int): UserCloudCastResponse? {
         val cloudCastCall = mixCloudApi.getUserCloudCasts(username, offset = getOffsetFromPage(page)!!)
-        var userCloudCastResponseRx:UserCloudCastResponse? = null
+        var userCloudCastResponseRx: UserCloudCastResponse? = null
         cloudCastCall.subscribe { userCloudCastResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userCloudCastResponseRx = UserCloudCastResponse(userCloudCastResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -198,12 +187,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getUserCloudCasts(username: String, limit: Int, page: Int): UserCloudCastResponse? {
-        val cloudCastCall = mixCloudApi.getUserCloudCasts(username,limit = limit,offset = getOffsetFromPage(page)!!)
-        var userCloudCastResponseRx:UserCloudCastResponse? = null
+        val cloudCastCall = mixCloudApi.getUserCloudCasts(username, limit = limit, offset = getOffsetFromPage(page)!!)
+        var userCloudCastResponseRx: UserCloudCastResponse? = null
         cloudCastCall.subscribe { userCloudCastResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userCloudCastResponseRx = UserCloudCastResponse(userCloudCastResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -212,11 +201,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getUserComments(username: String, page: Int): UserCommentsResponse? {
         val userCommentsCall = mixCloudApi.getUserComments(username, offset = getOffsetFromPage(page)!!)
-        var userCommentsResponseRx:UserCommentsResponse? = null
+        var userCommentsResponseRx: UserCommentsResponse? = null
         userCommentsCall.subscribe { userCommentsResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userCommentsResponseRx = UserCommentsResponse(userCommentsResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -224,12 +213,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getUserComments(username: String, limit: Int, page: Int): UserCommentsResponse? {
-        val userCommentsCall = mixCloudApi.getUserComments(username,limit = limit, offset = getOffsetFromPage(page)!!)
-        var userCommentsResponseRx:UserCommentsResponse? = null
+        val userCommentsCall = mixCloudApi.getUserComments(username, limit = limit, offset = getOffsetFromPage(page)!!)
+        var userCommentsResponseRx: UserCommentsResponse? = null
         userCommentsCall.subscribe { userCommentsResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userCommentsResponseRx = UserCommentsResponse(userCommentsResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -240,9 +229,9 @@ class MixCloudServiceImpl : MixCloudInterface {
         val userFavorites = mixCloudApi.getUserFavorites(username, offset = getOffsetFromPage(page)!!)
         var userFavoritesResponseRx: UserFavoritesResponse? = null
         userFavorites.subscribe { userFavoritesResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userFavoritesResponseRx = UserFavoritesResponse(userFavoritesResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -250,12 +239,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getUserFavorites(username: String, limit: Int, page: Int): UserFavoritesResponse? {
-        val userFavorites = mixCloudApi.getUserFavorites(username,limit=limit, offset = getOffsetFromPage(page)!!)
+        val userFavorites = mixCloudApi.getUserFavorites(username, limit = limit, offset = getOffsetFromPage(page)!!)
         var userFavoritesResponseRx: UserFavoritesResponse? = null
         userFavorites.subscribe { userFavoritesResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userFavoritesResponseRx = UserFavoritesResponse(userFavoritesResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -264,11 +253,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getUserFeed(username: String, page: Int): UserFeedResponse? {
         val userFeedCall = mixCloudApi.getUserFeed(username, offset = getOffsetFromPage(page)!!)
-        var userFeedResponseRx:UserFeedResponse? = null
+        var userFeedResponseRx: UserFeedResponse? = null
         userFeedCall.subscribe { userFeedResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userFeedResponseRx = UserFeedResponse(userFeedResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -276,12 +265,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getUserFeed(username: String, limit: Int, page: Int): UserFeedResponse? {
-        val userFeedCall = mixCloudApi.getUserFeed(username,limit=limit, offset = getOffsetFromPage(page)!!)
-        var userFeedResponseRx:UserFeedResponse? = null
+        val userFeedCall = mixCloudApi.getUserFeed(username, limit = limit, offset = getOffsetFromPage(page)!!)
+        var userFeedResponseRx: UserFeedResponse? = null
         userFeedCall.subscribe { userFeedResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userFeedResponseRx = UserFeedResponse(userFeedResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -290,11 +279,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getUserFollowers(username: String, page: Int): UserFollowersResponse? {
         val userFollowersCall = mixCloudApi.getUserFollowers(username, offset = getOffsetFromPage(page)!!)
-        var userFollowersResponseRx:UserFollowersResponse? = null
+        var userFollowersResponseRx: UserFollowersResponse? = null
         userFollowersCall.subscribe { userFollowersResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userFollowersResponseRx = UserFollowersResponse(userFollowersResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.message)
             }
         }
@@ -302,12 +291,13 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getUserFollowers(username: String, limit: Int, page: Int): UserFollowersResponse? {
-        val userFollowersCall = mixCloudApi.getUserFollowers(username,limit = limit, offset = getOffsetFromPage(page)!!)
-        var userFollowersResponseRx:UserFollowersResponse? = null
+        val userFollowersCall =
+            mixCloudApi.getUserFollowers(username, limit = limit, offset = getOffsetFromPage(page)!!)
+        var userFollowersResponseRx: UserFollowersResponse? = null
         userFollowersCall.subscribe { userFollowersResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userFollowersResponseRx = UserFollowersResponse(userFollowersResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.message)
             }
         }
@@ -316,11 +306,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getUserFollowing(username: String, page: Int): UserFollowingResponse? {
         val userFollowingCall = mixCloudApi.getUserFollowing(username, offset = getOffsetFromPage(page)!!)
-        var userFollowingResponseRx:UserFollowingResponse? = null
+        var userFollowingResponseRx: UserFollowingResponse? = null
         userFollowingCall.subscribe { userFollowingResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userFollowingResponseRx = UserFollowingResponse(userFollowingResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -328,12 +318,13 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getUserFollowing(username: String, limit: Int, page: Int): UserFollowingResponse? {
-        val userFollowingCall = mixCloudApi.getUserFollowing(username,limit = limit, offset = getOffsetFromPage(page)!!)
-        var userFollowingResponseRx:UserFollowingResponse? = null
+        val userFollowingCall =
+            mixCloudApi.getUserFollowing(username, limit = limit, offset = getOffsetFromPage(page)!!)
+        var userFollowingResponseRx: UserFollowingResponse? = null
         userFollowingCall.subscribe { userFollowingResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userFollowingResponseRx = UserFollowingResponse(userFollowingResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -342,11 +333,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getUserListens(username: String, page: Int): UserListensResponse? {
         val userListensCall = mixCloudApi.getUserListens(username, offset = getOffsetFromPage(page)!!)
-        var userListensResponseRx:UserListensResponse? = null
+        var userListensResponseRx: UserListensResponse? = null
         userListensCall.subscribe { userListensResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userListensResponseRx = UserListensResponse(userListensResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -354,12 +345,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getUserListens(username: String, limit: Int, page: Int): UserListensResponse? {
-        val userListensCall = mixCloudApi.getUserListens(username, limit = limit,offset = getOffsetFromPage(page)!!)
-        var userListensResponseRx:UserListensResponse? = null
+        val userListensCall = mixCloudApi.getUserListens(username, limit = limit, offset = getOffsetFromPage(page)!!)
+        var userListensResponseRx: UserListensResponse? = null
         userListensCall.subscribe { userListensResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userListensResponseRx = UserListensResponse(userListensResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -368,11 +359,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getUserPlaylists(username: String, page: Int): UserPlaylistsResponse? {
         val userPlaylistCall = mixCloudApi.getUserPlaylists(username, offset = getOffsetFromPage(page)!!)
-        var userPlayListsResponseRx:UserPlaylistsResponse? = null
+        var userPlayListsResponseRx: UserPlaylistsResponse? = null
         userPlaylistCall.subscribe { userPlaylistsResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userPlayListsResponseRx = UserPlaylistsResponse(userPlaylistsResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -380,12 +371,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getUserPlaylists(username: String, limit: Int, page: Int): UserPlaylistsResponse? {
-        val userPlaylistCall = mixCloudApi.getUserPlaylists(username,limit = limit, offset = getOffsetFromPage(page)!!)
-        var userPlayListsResponseRx:UserPlaylistsResponse? = null
+        val userPlaylistCall = mixCloudApi.getUserPlaylists(username, limit = limit, offset = getOffsetFromPage(page)!!)
+        var userPlayListsResponseRx: UserPlaylistsResponse? = null
         userPlaylistCall.subscribe { userPlaylistsResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 userPlayListsResponseRx = UserPlaylistsResponse(userPlaylistsResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -394,11 +385,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getTag(tag: String): TagResponse? {
         val tagCall = mixCloudApi.getTag(tag)
-        var tagResponseRx:TagResponse? = null
+        var tagResponseRx: TagResponse? = null
         tagCall.subscribe { tagResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 tagResponseRx = TagResponse(tagResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -409,9 +400,9 @@ class MixCloudServiceImpl : MixCloudInterface {
         val latestTagCall = mixCloudApi.getLatestTag(tag, offset = getOffsetFromPage(page)!!)
         var latestTagResponseRx: LatestTagResponse? = null
         latestTagCall.subscribe { latestTagResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 latestTagResponseRx = LatestTagResponse(latestTagResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -419,12 +410,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getLatestTag(tag: String, limit: Int, page: Int): LatestTagResponse? {
-        val latestTagCall = mixCloudApi.getLatestTag(tag,limit = limit, offset = getOffsetFromPage(page)!!)
+        val latestTagCall = mixCloudApi.getLatestTag(tag, limit = limit, offset = getOffsetFromPage(page)!!)
         var latestTagResponseRx: LatestTagResponse? = null
         latestTagCall.subscribe { latestTagResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 latestTagResponseRx = LatestTagResponse(latestTagResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -433,11 +424,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getPopularTag(tag: String, page: Int): PopularTagResponse? {
         val popularTagCall = mixCloudApi.getPopularTag(tag, offset = getOffsetFromPage(page)!!)
-        var popularTagResponseRx:PopularTagResponse? = null
+        var popularTagResponseRx: PopularTagResponse? = null
         popularTagCall.subscribe { popularTagResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 popularTagResponseRx = PopularTagResponse(popularTagResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -446,11 +437,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getPopularTag(tag: String, limit: Int, page: Int): PopularTagResponse? {
         val popularTagCall = mixCloudApi.getPopularTag(tag, limit = limit, offset = getOffsetFromPage(page)!!)
-        var popularTagResponseRx:PopularTagResponse? = null
+        var popularTagResponseRx: PopularTagResponse? = null
         popularTagCall.subscribe { popularTagResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 popularTagResponseRx = PopularTagResponse(popularTagResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -461,9 +452,9 @@ class MixCloudServiceImpl : MixCloudInterface {
         val cityCall = mixCloudApi.getCity(city)
         var cityResponseRx: CityResponse? = null
         cityCall.subscribe { cityResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 cityResponseRx = CityResponse(cityResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -474,9 +465,9 @@ class MixCloudServiceImpl : MixCloudInterface {
         val cityPopularCall = mixCloudApi.getCityPopular(city, offset = getOffsetFromPage(page)!!)
         var cityPopularResponseRx: CityPopularResponse? = null
         cityPopularCall.subscribe { cityPopularResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 cityPopularResponseRx = CityPopularResponse(cityPopularResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -484,12 +475,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getCityPopular(city: String, limit: Int, page: Int): CityPopularResponse? {
-        val cityPopularCall = mixCloudApi.getCityPopular(city, limit = limit,offset = getOffsetFromPage(page)!!)
+        val cityPopularCall = mixCloudApi.getCityPopular(city, limit = limit, offset = getOffsetFromPage(page)!!)
         var cityPopularResponseRx: CityPopularResponse? = null
         cityPopularCall.subscribe { cityPopularResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 cityPopularResponseRx = CityPopularResponse(cityPopularResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -498,11 +489,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getCityLatest(city: String, page: Int): CityLatestResponse? {
         val cityLatest = mixCloudApi.getCityLatest(city, offset = getOffsetFromPage(page)!!)
-        var cityLatestResponseRx:CityLatestResponse? = null
+        var cityLatestResponseRx: CityLatestResponse? = null
         cityLatest.subscribe { cityLatestResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 cityLatestResponseRx = CityLatestResponse(cityLatestResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.message)
             }
         }
@@ -510,12 +501,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getCityLatest(city: String, limit: Int, page: Int): CityLatestResponse? {
-        val cityLatest = mixCloudApi.getCityLatest(city,limit = limit, offset = getOffsetFromPage(page)!!)
-        var cityLatestResponseRx:CityLatestResponse? = null
+        val cityLatest = mixCloudApi.getCityLatest(city, limit = limit, offset = getOffsetFromPage(page)!!)
+        var cityLatestResponseRx: CityLatestResponse? = null
         cityLatest.subscribe { cityLatestResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 cityLatestResponseRx = CityLatestResponse(cityLatestResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.message)
             }
         }
@@ -524,11 +515,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getTagAndCity(tag: String, city: String): TagAndCityResponse? {
         val tagAndCityCall = mixCloudApi.getTagAndCity(tag, city)
-        var tagAndCityResponseRx:TagAndCityResponse? = null
+        var tagAndCityResponseRx: TagAndCityResponse? = null
         tagAndCityCall.subscribe { tagAndCityResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 tagAndCityResponseRx = TagAndCityResponse(tagAndCityResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -537,11 +528,11 @@ class MixCloudServiceImpl : MixCloudInterface {
 
     override fun getTagAndCityPopular(tag: String, city: String, page: Int): CityAndTagPopularResponse? {
         val tagAndCityPopularCall = mixCloudApi.getTagAndCityPopular(tag, city, offset = getOffsetFromPage(page)!!)
-        var tagAndCityResponseRx:CityAndTagPopularResponse? = null
+        var tagAndCityResponseRx: CityAndTagPopularResponse? = null
         tagAndCityPopularCall.subscribe { cityAndTagPopularResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 tagAndCityResponseRx = CityAndTagPopularResponse(cityAndTagPopularResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -549,27 +540,27 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getTagAndCityPopular(tag: String, city: String, limit: Int, page: Int): CityAndTagPopularResponse? {
-        val tagAndCityPopularCall = mixCloudApi.getTagAndCityPopular(tag, city, limit = limit, offset = getOffsetFromPage(page)!!)
-        var tagAndCityResponseRx:CityAndTagPopularResponse? = null
+        val tagAndCityPopularCall =
+            mixCloudApi.getTagAndCityPopular(tag, city, limit = limit, offset = getOffsetFromPage(page)!!)
+        var tagAndCityResponseRx: CityAndTagPopularResponse? = null
         tagAndCityPopularCall.subscribe { cityAndTagPopularResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 tagAndCityResponseRx = CityAndTagPopularResponse(cityAndTagPopularResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
         return tagAndCityResponseRx
     }
 
- 
 
     override fun getTagAndCityLatest(tag: String, city: String, page: Int): CityAndTagLatestResponse? {
         val tagAndCityLatestCall = mixCloudApi.getTagAndCityLatest(tag, city, offset = getOffsetFromPage(page)!!)
-        var cityAndTagLatestResponseRx:CityAndTagLatestResponse? = null
+        var cityAndTagLatestResponseRx: CityAndTagLatestResponse? = null
         tagAndCityLatestCall.subscribe { cityAndTagLatestResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 cityAndTagLatestResponseRx = CityAndTagLatestResponse(cityAndTagLatestResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -577,12 +568,13 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getTagAndCityLatest(tag: String, city: String, limit: Int, page: Int): CityAndTagLatestResponse? {
-        val tagAndCityLatestCall = mixCloudApi.getTagAndCityLatest(tag, city,limit = limit, offset = getOffsetFromPage(page)!!)
-        var cityAndTagLatestResponseRx:CityAndTagLatestResponse? = null
+        val tagAndCityLatestCall =
+            mixCloudApi.getTagAndCityLatest(tag, city, limit = limit, offset = getOffsetFromPage(page)!!)
+        var cityAndTagLatestResponseRx: CityAndTagLatestResponse? = null
         tagAndCityLatestCall.subscribe { cityAndTagLatestResponse, throwable ->
-            if(throwable == null) {
+            if (throwable == null) {
                 cityAndTagLatestResponseRx = CityAndTagLatestResponse(cityAndTagLatestResponse)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -590,12 +582,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun followUser(username: String, accessToken: String): FollowResponse? {
-        val followUserCall = mixCloudApi.followUser(username,accessToken)
-        var followResponse:FollowResponse? = null
-        followUserCall.subscribe { followResponze,throwable ->
-            if(throwable == null) {
+        val followUserCall = mixCloudApi.followUser(username, accessToken)
+        var followResponse: FollowResponse? = null
+        followUserCall.subscribe { followResponze, throwable ->
+            if (throwable == null) {
                 followResponse = FollowResponse(followResponze)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -603,12 +595,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun favoriting(username: String, show: String, accessToken: String): FavoritingResponse? {
-        val favoritingCall = mixCloudApi.favoriting(username,show,accessToken)
-        var favoritingResponse:FavoritingResponse? = null
-        favoritingCall.subscribe { favorite,throwable ->
-            if(throwable == null){
+        val favoritingCall = mixCloudApi.favoriting(username, show, accessToken)
+        var favoritingResponse: FavoritingResponse? = null
+        favoritingCall.subscribe { favorite, throwable ->
+            if (throwable == null) {
                 favoritingResponse = FavoritingResponse(favorite)
-            }else{
+            } else {
                 LOGGER?.error(throwable.message)
             }
         }
@@ -616,12 +608,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun reposting(username: String, show: String, accessToken: String): RepostingResponse? {
-        val repostingCall = mixCloudApi.reposting(username,show,accessToken)
-        var repostingResponse:RepostingResponse? = null
+        val repostingCall = mixCloudApi.reposting(username, show, accessToken)
+        var repostingResponse: RepostingResponse? = null
         repostingCall.subscribe { repost, throwable ->
-            if(throwable == null){
+            if (throwable == null) {
                 repostingResponse = RepostingResponse(repost)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
@@ -629,12 +621,12 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun listenLater(username: String, show: String, accessToken: String): ListenLaterResponse? {
-        val listenLaterCall = mixCloudApi.listenLater(username,show,accessToken)
-        var listenLaterResponse:ListenLaterResponse? = null
-        listenLaterCall.subscribe { listen,throwable ->
-            if(throwable == null){
+        val listenLaterCall = mixCloudApi.listenLater(username, show, accessToken)
+        var listenLaterResponse: ListenLaterResponse? = null
+        listenLaterCall.subscribe { listen, throwable ->
+            if (throwable == null) {
                 listenLaterResponse = ListenLaterResponse(listen)
-            }else{
+            } else {
                 LOGGER?.error(throwable.localizedMessage)
             }
         }
