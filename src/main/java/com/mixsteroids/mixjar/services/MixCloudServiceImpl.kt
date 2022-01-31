@@ -45,7 +45,7 @@ class MixCloudServiceImpl : MixCloudInterface {
         val showCall = mixCloudApi.getShow(entertainer, show)
         var showResponseRx:ShowResponse? = null
         showCall.subscribe { showResponse, throwable ->
-            if(throwable == null) {g
+            if(throwable == null) {
                 showResponseRx = ShowResponse(showResponse)
             }else{
                 println(throwable.message)
