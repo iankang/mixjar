@@ -5,110 +5,115 @@ import com.google.gson.annotations.SerializedName
 
 data class SingleTrackResponse(
     @SerializedName("artwork_url")
-    var artworkUrl: String,
+    var artworkUrl: String?,
     @SerializedName("artwork_url_retina")
-    var artworkUrlRetina: String,
+    var artworkUrlRetina: String?,
     @SerializedName("background_url")
-    var backgroundUrl: String,
+    var backgroundUrl: String?,
     @SerializedName("bpm")
-    var bpm: String,
+    var bpm: String?,
     @SerializedName("comment_count")
-    var commentCount: String,
+    var commentCount: String?,
     @SerializedName("created_at")
-    var createdAt: String,
+    var createdAt: String?,
     @SerializedName("description")
-    var description: String,
+    var description: String?,
     @SerializedName("download_count")
-    var downloadCount: String,
+    var downloadCount: String?,
     @SerializedName("download_filename")
-    var downloadFilename: String,
+    var downloadFilename: String?,
     @SerializedName("download_url")
-    var downloadUrl: String,
+    var downloadUrl: String?,
     @SerializedName("downloadable")
-    var downloadable: Int,
+    var downloadable: Int?,
     @SerializedName("duration")
-    var duration: String,
+    var duration: String?,
     @SerializedName("fan_exclusive_download")
-    var fanExclusiveDownload: Int,
+    var fanExclusiveDownload: Int?,
     @SerializedName("fan_exclusive_play")
-    var fanExclusivePlay: Int,
+    var fanExclusivePlay: Int?,
     @SerializedName("favorited")
-    var favorited: Boolean,
+    var favorited: Boolean?,
     @SerializedName("favoritings_count")
-    var favoritingsCount: String,
+    var favoritingsCount: String?,
     @SerializedName("genre")
-    var genre: String,
+    var genre: String?,
     @SerializedName("genre_slush")
-    var genreSlush: String,
+    var genreSlush: String?,
     @SerializedName("geo")
-    var geo: String,
+    var geo: String?,
     @SerializedName("id")
-    var id: String,
+    var id: String?,
     @SerializedName("key")
-    var key: String,
+    var key: String?,
     @SerializedName("license")
-    var license: String,
+    var license: String?,
     @SerializedName("liked")
-    var liked: Boolean,
+    var liked: Boolean?,
     @SerializedName("permalink")
-    var permalink: String,
+    var permalink: String?,
     @SerializedName("permalink_url")
-    var permalinkUrl: String,
+    var permalinkUrl: String?,
     @SerializedName("playback_count")
-    var playbackCount: String,
+    var playbackCount: String?,
     @SerializedName("played")
-    var played: Boolean,
+    var played: Boolean?,
     @SerializedName("preview_url")
-    var previewUrl: String,
+    var previewUrl: String?,
     @SerializedName("private")
-    var `private`: String,
+    var `private`: String?,
     @SerializedName("release_date")
-    var releaseDate: String,
+    var releaseDate: String?,
     @SerializedName("release_timestamp")
-    var releaseTimestamp: Int,
+    var releaseTimestamp: Int?,
     @SerializedName("reshared")
-    var reshared: Boolean,
+    var reshared: Boolean?,
     @SerializedName("reshares_count")
-    var resharesCount: String,
+    var resharesCount: String?,
     @SerializedName("stream_url")
-    var streamUrl: String,
+    var streamUrl: String?,
     @SerializedName("taged_artists")
-    var tagedArtists: String,
+    var tagedArtists: String?,
     @SerializedName("tags")
-    var tags: String,
+    var tags: String?,
     @SerializedName("thumb")
-    var thumb: String,
+    var thumb: String?,
     @SerializedName("title")
-    var title: String,
+    var title: String?,
     @SerializedName("type")
-    var type: String,
+    var type: String?,
     @SerializedName("uri")
-    var uri: String,
+    var uri: String?,
     @SerializedName("user")
-    var user: HearthisAtUser,
+    var user: HearthisAtUser?,
     @SerializedName("user_id")
-    var userId: String,
+    var userId: String?,
     @SerializedName("version")
-    var version: String,
+    var version: String?,
     @SerializedName("waveform_data")
-    var waveformData: String,
+    var waveformData: String?,
     @SerializedName("waveform_url")
-    var waveformUrl: String
-)
+    var waveformUrl: String?
+){
+    constructor():this(null,null,null,null,null,null,null,null,null,null,
+    null,null,null,null,null,null,null,null,null,null,null,null,
+    null,null,null,null,null,null,null,null,null,null,null,null,null,
+    null,null,null,null,null,null,null,null,null,null)
+}
 
 //data class HearthisAtUser(
 //    @SerializedName("avatar_url")
-//    var avatarUrl: String,
+//    var avatarUrl: String?,
 //    @SerializedName("caption")
-//    var caption: String,
+//    var caption: String?,
 //    @SerializedName("id")
-//    var id: String,
+//    var id: String?,
 //    @SerializedName("permalink")
-//    var permalink: String,
+//    var permalink: String?,
 //    @SerializedName("permalink_url")
-//    var permalinkUrl: String,
+//    var permalinkUrl: String?,
 //    @SerializedName("uri")
-//    var uri: String,
+//    var uri: String?,
 //    @SerializedName("username")
 //    var username: String
 //)

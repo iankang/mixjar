@@ -5,51 +5,78 @@ import com.google.gson.annotations.SerializedName
 
 data class HearthisatLoginResponse(
     @SerializedName("allow_push")
-    var allowPush: Int,
+    var allowPush: Int?,
     @SerializedName("avatar_url")
-    var avatarUrl: String,
+    var avatarUrl: String?,
     @SerializedName("background_url")
-    var backgroundUrl: String,
+    var backgroundUrl: String?,
     @SerializedName("caption")
-    var caption: String,
+    var caption: String?,
     @SerializedName("description")
-    var description: String,
+    var description: String?,
     @SerializedName("email")
-    var email: String,
+    var email: String?,
     @SerializedName("followers_count")
-    var followersCount: String,
+    var followersCount: String?,
     @SerializedName("following")
-    var following: Boolean,
+    var following: Boolean?,
     @SerializedName("following_count")
-    var followingCount: String,
+    var followingCount: String?,
     @SerializedName("geo")
-    var geo: String,
+    var geo: String?,
     @SerializedName("id")
-    var id: String,
+    var id: String?,
     @SerializedName("key")
-    var key: String,
+    var key: String?,
     @SerializedName("likes_count")
-    var likesCount: String,
+    var likesCount: String?,
     @SerializedName("locale")
-    var locale: String,
+    var locale: String?,
     @SerializedName("720p_url")
-    var pUrl: String,
+    var pUrl: String?,
     @SerializedName("permalink")
-    var permalink: String,
+    var permalink: String?,
     @SerializedName("permalink_url")
-    var permalinkUrl: String,
+    var permalinkUrl: String?,
     @SerializedName("playlist_count")
-    var playlistCount: String,
+    var playlistCount: String?,
     @SerializedName("premium")
-    var premium: Boolean,
+    var premium: Boolean?,
     @SerializedName("secret")
-    var secret: String,
+    var secret: String?,
     @SerializedName("thumb_url")
-    var thumbUrl: String,
+    var thumbUrl: String?,
     @SerializedName("track_count")
-    var trackCount: String,
+    var trackCount: String?,
     @SerializedName("uri")
-    var uri: String,
+    var uri: String?,
     @SerializedName("username")
-    var username: String
-)
+    var username: String?
+){
+    constructor():this(
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+    )
+}

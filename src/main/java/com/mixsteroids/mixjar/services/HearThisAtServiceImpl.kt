@@ -24,7 +24,7 @@ class HearThisAtServiceImpl: HearThisAtInterface {
         showFeedEnd: String
     ): HearthisAtFeedResponse? {
         val feedCall =  hearThisAtApi.getFeed(page, count, duration, type, category, showFeedStart, showFeedEnd)
-        var feedResponse :HearthisAtFeedResponse? = null
+        var feedResponse :HearthisAtFeedResponse? = HearthisAtFeedResponse()
         feedCall.subscribe{feed, throwable ->
             if(throwable == null){
                 feedResponse =  feed
@@ -37,7 +37,7 @@ class HearThisAtServiceImpl: HearThisAtInterface {
 
     override fun getAllGenres(): HearThisAtGenresResponse? {
         val genresCall = hearThisAtApi.getAllGenres()
-        var genreResponse:HearThisAtGenresResponse? = null
+        var genreResponse:HearThisAtGenresResponse? = HearThisAtGenresResponse()
         genresCall.subscribe { genres, throwable ->
             if(throwable == null){
                 genreResponse = genres
@@ -50,7 +50,7 @@ class HearThisAtServiceImpl: HearThisAtInterface {
 
     override fun getGenreList(categoryName: String, page: Int, count: Int,duration: Int?): GenreList? {
         val genreListCall = hearThisAtApi.getGenreList(categoryName, page, count,duration)
-        var genreListResponse:GenreList? = null
+        var genreListResponse:GenreList? = GenreList()
         genreListCall.subscribe { genres,throwable ->
             if(throwable == null){
                 genreListResponse = genres
@@ -63,7 +63,7 @@ class HearThisAtServiceImpl: HearThisAtInterface {
 
     override fun getSingleArtist(artistName: String): SingleArtistResponse? {
         val singleArtistCall = hearThisAtApi.getSingleArtist(artistName)
-        var singleArtistResponse:SingleArtistResponse? = null
+        var singleArtistResponse:SingleArtistResponse? = SingleArtistResponse()
         singleArtistCall.subscribe { single,throwable ->
             if(throwable == null){
                 singleArtistResponse = single
@@ -76,7 +76,7 @@ class HearThisAtServiceImpl: HearThisAtInterface {
 
     override fun getArtistsList(artistName: String, type: String?, page: Int?, count: Int?): ArtistListResponse? {
         val artistsListCall = hearThisAtApi.getArtistsLists(artistName, type, page, count)
-        var artistListResponse:ArtistListResponse? = null
+        var artistListResponse:ArtistListResponse? = ArtistListResponse()
         artistsListCall.subscribe { artistList, throwable ->
             if(throwable == null){
                 artistListResponse = artistList
@@ -89,7 +89,7 @@ class HearThisAtServiceImpl: HearThisAtInterface {
 
     override fun getSingleTrack(artistName: String, trackName: String): SingleTrackResponse? {
         val singleTrackCall= hearThisAtApi.getSingleTrack(artistName, trackName)
-        var singleTrackResponse:SingleTrackResponse? = null
+        var singleTrackResponse:SingleTrackResponse? = SingleTrackResponse()
         singleTrackCall.subscribe { track, throwable ->
             if(throwable == null){
                 singleTrackResponse = track
@@ -102,7 +102,7 @@ class HearThisAtServiceImpl: HearThisAtInterface {
 
     override fun getSinglePlaylist(artistName: String,types: String, page: Int?, count: Int?): SinglePlaylist? {
         val singlePlaylistCall = hearThisAtApi.getSinglePlaylist(artistName,types, page, count)
-        var singlePlaylistResponse:SinglePlaylist? = null
+        var singlePlaylistResponse:SinglePlaylist? = SinglePlaylist()
         singlePlaylistCall.subscribe { playlist,throwable ->
             if(throwable == null){
                 singlePlaylistResponse = playlist
@@ -130,7 +130,7 @@ class HearThisAtServiceImpl: HearThisAtInterface {
 
     override fun login(email: String, password: String): HearthisatLoginResponse? {
         val loginCall = hearThisAtApi.login(email, password)
-        var loginResponse:HearthisatLoginResponse? = null
+        var loginResponse:HearthisatLoginResponse? = HearthisatLoginResponse()
         loginCall.subscribe { login, throwable ->
             if(throwable == null){
                 loginResponse = login

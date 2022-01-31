@@ -8,10 +8,10 @@ fun main() {
     //exclusive
 //    val item1 = mixCloudServiceImpl.getShow("DJ_Jukess","thehypeaugust-nsg-vs-wstrn-mix-dj_jukess")
 
-    val item1 = mixCloudServiceImpl.getShow("mixmastermorris","mixmaster-morris-steinski-new-york")
+//    val item1 = mixCloudServiceImpl.getShow("mixmastermorrissdfasdf","mixmaster-morris-steinski-new-york")
 //    val item =  mixCloudServiceImpl.getUser("ian-kangethe")
 //    println("actualItem: ${item?.toString()}")
-    println("getShow: $item1")
+//    println("getShow: $item1")
 //    val item = mixCloudServiceImpl.getUserFeed("ian-kangethe",1)
 //    val cloud = mixCloudServiceImpl.getUserCloudCast("The_Fixx",0)
 //    println(cloud)
