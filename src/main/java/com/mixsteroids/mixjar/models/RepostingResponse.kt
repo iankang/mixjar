@@ -6,6 +6,8 @@ data class RepostingResponse(
     constructor(repostingResponse: RepostingResponse?):this(
         repostingResponse?.result
     )
+
+    constructor():this(repostingResponse = null)
 }
 
 data class RepostingResult(

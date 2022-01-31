@@ -14,6 +14,8 @@ data class UserPlaylistsResponse (
 		userPlaylistsResponse?.paging,
 		userPlaylistsResponse?.name
 	)
+
+	constructor():this(userPlaylistsResponse = null)
 }
 
 data class UserPlaylistsResponseData (

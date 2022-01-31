@@ -18,6 +18,8 @@ data class TagResponse (
 		tagResponse?.type,
 		tagResponse?.metadata
 	)
+
+	constructor():this(tagResponse = null)
 }
 data class CityResponse (
 
@@ -34,6 +36,8 @@ data class CityResponse (
 		cityResponse?.type,
 		cityResponse?.metadata
 	)
+
+	constructor():this(cityResponse = null)
 }
 data class TagAndCityResponse (
 
@@ -50,6 +54,8 @@ data class TagAndCityResponse (
 		tagAndCityResponse?.type,
 		tagAndCityResponse?.metadata
 	)
+
+	constructor():this(tagAndCityResponse = null)
 }
 
 

@@ -15,6 +15,8 @@ data class ShowListenersResponse (
 				showListenersResponse?.paging,
 				showListenersResponse?.name
 			)
+
+	constructor():this(showListenersResponse = null)
 }
 
 data class ShowListenersResponseData (

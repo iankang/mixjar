@@ -14,6 +14,7 @@ data class UserListensResponse (
 		userListensResponse?.paging,
 		userListensResponse?.name
 	)
+	constructor():this(userListensResponse = null)
 }
 
 data class UserListensResponseData (

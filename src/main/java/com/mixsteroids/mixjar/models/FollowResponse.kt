@@ -6,6 +6,8 @@ data class FollowResponse(
     constructor(followResponse: FollowResponse?):this(
         followResponse?.result
     )
+
+    constructor():this(followResponse = null)
 }
 
 data class Result(

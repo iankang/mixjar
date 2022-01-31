@@ -11,6 +11,8 @@ data class CityAndTagLatestResponse(
 		cityAndTagLatestResponse?.data,
 		cityAndTagLatestResponse?.paging
 	)
+
+	constructor():this(cityAndTagLatestResponse = null)
 }
 
 data class CityAndTagLatestResponseData (

@@ -12,6 +12,8 @@ data class CityAndTagPopularResponse (
 		cityAndTagPopularResponse?.data,
 		cityAndTagPopularResponse?.paging
 	)
+
+	constructor():this(cityAndTagPopularResponse = null)
 }
 data class CityAndTagPopularResponseData (
 

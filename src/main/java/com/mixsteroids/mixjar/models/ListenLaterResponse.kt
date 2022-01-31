@@ -6,6 +6,8 @@ data class ListenLaterResponse(
     constructor(followResponse: ListenLaterResponse?):this(
         followResponse?.result
     )
+
+    constructor():this(followResponse = null)
 }
 
 data class ListenLaterResult(

@@ -13,6 +13,7 @@ data class UserCloudCastResponse (
 		userCloudCastResponse?.paging,
 		userCloudCastResponse?.name
 	)
+	constructor():this(userCloudCastResponse = null)
 }
 
 data class UserCloudCastResponseUser (

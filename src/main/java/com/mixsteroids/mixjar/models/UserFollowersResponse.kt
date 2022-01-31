@@ -14,6 +14,8 @@ data class UserFollowersResponse (
 		userFollowersResponse?.paging,
 		userFollowersResponse?.name
 	)
+
+	constructor():this(userFollowersResponse = null)
 }
 
 data class UserFollowersData (

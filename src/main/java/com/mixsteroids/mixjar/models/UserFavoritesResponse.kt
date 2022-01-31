@@ -14,6 +14,8 @@ data class UserFavoritesResponse (
 		userFavoritesResponse?.paging,
 		userFavoritesResponse?.name
 	)
+
+	constructor():this(userFavoritesResponse = null)
 }
 
 data class UserFavoritesResponseData (

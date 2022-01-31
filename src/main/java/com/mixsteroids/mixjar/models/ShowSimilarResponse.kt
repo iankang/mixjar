@@ -14,6 +14,8 @@ data class ShowSimilarResponse (
 		showSimilarResponse?.paging,
 		showSimilarResponse?.name,
 	)
+
+	constructor():this(showSimilarResponse = null)
 }
 
 data class ShowSimilarResponseData (

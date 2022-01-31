@@ -6,6 +6,8 @@ data class FavoritingResponse(
     constructor(followResponse: FavoritingResponse?):this(
         followResponse?.result
     )
+
+    constructor():this(followResponse = null)
 }
 
 data class FavoritingResult(

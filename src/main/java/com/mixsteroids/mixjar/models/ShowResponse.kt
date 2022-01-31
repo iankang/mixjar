@@ -51,6 +51,8 @@ data class ShowResponse (
 				showResponse?.type,
 				showResponse?.metadata
 			)
+
+	constructor():this(showResponse = null)
 }
 
 data class ShowResponseConnections (

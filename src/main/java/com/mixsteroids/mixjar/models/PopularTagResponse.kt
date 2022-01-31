@@ -12,6 +12,8 @@ data class PopularTagResponse (
 		popularTagResponse?.data,
 		popularTagResponse?.paging
 	)
+
+	constructor():this(popularTagResponse = null)
 }
 
 data class PopularTagResponseData (

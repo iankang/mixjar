@@ -14,6 +14,8 @@ data class ShowCommentsResponse (
 		showCommentsResponse?.paging,
 		showCommentsResponse?.name
 	)
+
+	constructor():this(showCommentsResponse = null)
 }
 
 data class ShowCommentsResponseData (

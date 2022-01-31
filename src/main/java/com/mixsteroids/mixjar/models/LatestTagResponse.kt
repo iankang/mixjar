@@ -12,6 +12,8 @@ data class LatestTagResponse (
 		latestTagResponse?.data,
 		latestTagResponse?.paging
 	)
+
+	constructor():this(latestTagResponse = null)
 }
 
 data class LatestTagResponseData (

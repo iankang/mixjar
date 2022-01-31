@@ -15,6 +15,7 @@ data class UserFeedResponse(
                 userFeedResponse?.paging,
                 userFeedResponse?.name
             )
+    constructor():this(userFeedResponse = null)
 }
 
 data class UserFeedPictures(

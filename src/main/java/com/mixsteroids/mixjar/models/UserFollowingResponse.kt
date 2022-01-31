@@ -12,6 +12,8 @@ data class UserFollowingResponse (
 		userFollowingResponse?.data,
 		userFollowingResponse?.paging
 	)
+
+	constructor():this(userFollowingResponse = null)
 }
 
 data class UserFollowingResponseData (

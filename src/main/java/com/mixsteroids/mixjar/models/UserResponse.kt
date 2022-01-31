@@ -46,6 +46,8 @@ data class UserResponse(
 		userResponse?.picture_primary_color,
 		userResponse?.type,
 		userResponse?.metadata)
+
+	constructor():this(userResponse = null)
 }
 
 data class UserResponsePictures (

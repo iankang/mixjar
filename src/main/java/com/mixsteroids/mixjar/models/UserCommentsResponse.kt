@@ -14,6 +14,7 @@ data class UserCommentsResponse (
 		userCommentsResponse?.paging,
 		userCommentsResponse?.name
 	)
+	constructor():this(userCommentsResponse = null)
 }
 
 data class UserCommentsResponseUser (

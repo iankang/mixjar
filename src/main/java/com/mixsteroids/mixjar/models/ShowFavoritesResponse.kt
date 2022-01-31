@@ -13,6 +13,8 @@ data class ShowFavoritesResponse (
 				showFavoritesResponse?.data,
 				showFavoritesResponse?.paging
 			)
+
+	constructor():this(showFavoritesResponse = null)
 }
 
 data class ShowFavoritesResponseData (
