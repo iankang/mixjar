@@ -42,10 +42,10 @@ class MixCloudServiceImpl : MixCloudInterface {
 
 
     override fun getShow(entertainer: String, show: String, page: Int): ShowResponse? {
-        val showCall = mixCloudApi.getShow(entertainer, show, offset = getOffsetFromPage(page)!!)
+        val showCall = mixCloudApi.getShow(entertainer, show)
         var showResponseRx:ShowResponse? = null
         showCall.subscribe { showResponse, throwable ->
-            if(throwable == null) {
+            if(throwable == null) {g
                 showResponseRx = ShowResponse(showResponse)
             }else{
                 println(throwable.message)
@@ -55,7 +55,7 @@ class MixCloudServiceImpl : MixCloudInterface {
     }
 
     override fun getShow(entertainer: String, show: String, linit: Int, page: Int): ShowResponse? {
-        val showCall = mixCloudApi.getShow(entertainer, show,limit= linit, offset = getOffsetFromPage(page)!!)
+        val showCall = mixCloudApi.getShow(entertainer, show)
         var showResponseRx:ShowResponse? = null
         showCall.subscribe { showResponse, throwable ->
             if(throwable == null) {

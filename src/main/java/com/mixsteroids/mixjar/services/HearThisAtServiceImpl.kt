@@ -115,10 +115,11 @@ class HearThisAtServiceImpl: HearThisAtInterface {
 
     override fun search(type: String, t: String, page: Int?, count: Int?, duration: Int?): HearthisAtSearchResponse? {
         val searchCall = hearThisAtApi.Search(type, t, page, count, duration)
-        var searchResponse:HearthisAtSearchResponse? = null
+        var searchResponse:HearthisAtSearchResponse? = HearthisAtSearchResponse()
         searchCall.subscribe { search,throwable ->
             if(throwable == null){
                 searchResponse =  search
+
 
             }else{
                 LOGGER.error(throwable.message)

@@ -91,9 +91,7 @@ interface MixCloudService {
     @GET("{entertainer}/{showname}/?metadata=1")
     fun getShow(
         @Path("entertainer") entertainer: String,
-        @Path("showname") showName: String,
-        @Query("limit") limit: Int = LIMIT_VALUE,
-        @Query("offset") offset: Int = 0
+        @Path("showname") showName: String
     ): Single<ShowResponse>
 
     @GET("{entertainer}/{showname}/favorites/")
