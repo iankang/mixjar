@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1972f3f-5662-4c20-ba65-1b43ba360cfb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/services/MixCloudServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/mixsteroids/mixjar/models" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/mixhunt" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
