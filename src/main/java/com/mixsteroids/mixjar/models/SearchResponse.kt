@@ -8,6 +8,8 @@ data class SearchResponse(
         searchCloudcastResponse?.data,
         searchCloudcastResponse?.paging
     )
+
+    constructor():this(searchCloudcastResponse = SearchResponse(null,null))
 }
 
 data class Data(

@@ -3,52 +3,50 @@ package com.mixsteroids.mixjar.models
 import com.google.gson.annotations.SerializedName
 
 
-data class UserPlaylistsResponse (
+data class UserPlaylistsResponse(
 
-	@SerializedName("data") val data : List<UserPlaylistsResponseData>?,
-	@SerializedName("paging") val paging : UserPlaylistsResponsePaging?,
-	@SerializedName("name") val name : String?
-){
-	constructor(userPlaylistsResponse: UserPlaylistsResponse?):this(
-		userPlaylistsResponse?.data,
-		userPlaylistsResponse?.paging,
-		userPlaylistsResponse?.name
-	)
+    @SerializedName("data") val data: List<UserPlaylistsResponseData>?,
+    @SerializedName("paging") val paging: UserPlaylistsResponsePaging?,
+    @SerializedName("name") val name: String?
+) {
+    constructor(userPlaylistsResponse: UserPlaylistsResponse?) : this(
+        userPlaylistsResponse?.data, userPlaylistsResponse?.paging, userPlaylistsResponse?.name
+    )
 
-	constructor():this(userPlaylistsResponse = null)
+    constructor() : this(userPlaylistsResponse = UserPlaylistsResponse(null, null, null))
 }
 
-data class UserPlaylistsResponseData (
+data class UserPlaylistsResponseData(
 
-	@SerializedName("key") val key : String?,
-	@SerializedName("url") val url : String?,
-	@SerializedName("name") val name : String?,
-	@SerializedName("owner") val owner : UserPlaylistsResponseOwner?,
-	@SerializedName("slug") val slug : String?
+    @SerializedName("key") val key: String?,
+    @SerializedName("url") val url: String?,
+    @SerializedName("name") val name: String?,
+    @SerializedName("owner") val owner: UserPlaylistsResponseOwner?,
+    @SerializedName("slug") val slug: String?
 )
 
-data class UserPlaylistsResponseOwner (
+data class UserPlaylistsResponseOwner(
 
-	@SerializedName("key") val key : String?,
-	@SerializedName("url") val url : String?,
-	@SerializedName("name") val name : String?,
-	@SerializedName("username") val username : String?,
-	@SerializedName("pictures") val pictures : UserPlaylistsResponsePictures?
-)
-data class UserPlaylistsResponsePaging (
-
-	@SerializedName("next") val next : String?,
-	@SerializedName("previous") val previous : String?
+    @SerializedName("key") val key: String?,
+    @SerializedName("url") val url: String?,
+    @SerializedName("name") val name: String?,
+    @SerializedName("username") val username: String?,
+    @SerializedName("pictures") val pictures: UserPlaylistsResponsePictures?
 )
 
-data class UserPlaylistsResponsePictures (
+data class UserPlaylistsResponsePaging(
 
-	@SerializedName("small") val small : String?,
-	@SerializedName("thumbnail") val thumbnail : String?,
-	@SerializedName("medium_mobile") val medium_mobile : String?,
-	@SerializedName("medium") val medium : String?,
-	@SerializedName("large") val large : String?,
-	@SerializedName("320wx320h") val small320wx320h : String?,
-	@SerializedName("extra_large") val extra_large : String?,
-	@SerializedName("640wx640h") val small640wx640h : String?
+    @SerializedName("next") val next: String?, @SerializedName("previous") val previous: String?
+)
+
+data class UserPlaylistsResponsePictures(
+
+    @SerializedName("small") val small: String?,
+    @SerializedName("thumbnail") val thumbnail: String?,
+    @SerializedName("medium_mobile") val medium_mobile: String?,
+    @SerializedName("medium") val medium: String?,
+    @SerializedName("large") val large: String?,
+    @SerializedName("320wx320h") val small320wx320h: String?,
+    @SerializedName("extra_large") val extra_large: String?,
+    @SerializedName("640wx640h") val small640wx640h: String?
 )

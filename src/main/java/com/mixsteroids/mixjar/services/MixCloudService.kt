@@ -87,6 +87,14 @@ interface MixCloudService {
         @Query("offset") offset: Int = 0
     ): Single<UserPlaylistsResponse>
 
+    @GET("{user}/playlists/{playlistSlug}/cloudcasts")
+    fun getUserPlaylistsCloudcasts(
+        @Path("user") username: String,
+        @Path("playlistSlug") playlistSlug:String,
+        @Query("limit") limit: Int = LIMIT_VALUE,
+        @Query("offset") offset: Int = 0
+    ): Single<UserCloudCastResponse>
+
 
     @GET("{entertainer}/{showname}/?metadata=1")
     fun getShow(

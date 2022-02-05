@@ -3,43 +3,40 @@ package com.mixsteroids.mixjar.models
 import com.google.gson.annotations.SerializedName
 
 
-data class ShowFavoritesResponse (
+data class ShowFavoritesResponse(
 
-	@SerializedName("data") val data : List<ShowFavoritesResponseData?>?,
-	@SerializedName("paging") val paging : ShowFavoritesResponsePaging?
-){
-	constructor(showFavoritesResponse: ShowFavoritesResponse?):
-			this(
-				showFavoritesResponse?.data,
-				showFavoritesResponse?.paging
-			)
+    @SerializedName("data") val data: List<ShowFavoritesResponseData?>?,
+    @SerializedName("paging") val paging: ShowFavoritesResponsePaging?
+) {
+    constructor(showFavoritesResponse: ShowFavoritesResponse?) : this(
+        showFavoritesResponse?.data, showFavoritesResponse?.paging
+    )
 
-	constructor():this(showFavoritesResponse = null)
+    constructor() : this(null, null)
 }
 
-data class ShowFavoritesResponseData (
+data class ShowFavoritesResponseData(
 
-	@SerializedName("key") val key : String?,
-	@SerializedName("url") val url : String?,
-	@SerializedName("name") val name : String?,
-	@SerializedName("username") val username : String?,
-	@SerializedName("pictures") val pictures : ShowFavoritesPictures?
+    @SerializedName("key") val key: String?,
+    @SerializedName("url") val url: String?,
+    @SerializedName("name") val name: String?,
+    @SerializedName("username") val username: String?,
+    @SerializedName("pictures") val pictures: ShowFavoritesPictures?
 )
 
-data class ShowFavoritesResponsePaging (
+data class ShowFavoritesResponsePaging(
 
-	@SerializedName("next") val next : String?,
-	@SerializedName("previous") val previous : String?
+    @SerializedName("next") val next: String?, @SerializedName("previous") val previous: String?
 )
 
-data class ShowFavoritesPictures (
+data class ShowFavoritesPictures(
 
-	@SerializedName("small") val small : String?,
-	@SerializedName("thumbnail") val thumbnail : String?,
-	@SerializedName("medium_mobile") val medium_mobile : String?,
-	@SerializedName("medium") val medium : String?,
-	@SerializedName("large") val large : String?,
-	@SerializedName("320wx320h") val picture320wx320h : String?,
-	@SerializedName("extra_large") val extra_large : String?,
-	@SerializedName("640wx640h") val picture640wx640h : String?
+    @SerializedName("small") val small: String?,
+    @SerializedName("thumbnail") val thumbnail: String?,
+    @SerializedName("medium_mobile") val medium_mobile: String?,
+    @SerializedName("medium") val medium: String?,
+    @SerializedName("large") val large: String?,
+    @SerializedName("320wx320h") val picture320wx320h: String?,
+    @SerializedName("extra_large") val extra_large: String?,
+    @SerializedName("640wx640h") val picture640wx640h: String?
 )

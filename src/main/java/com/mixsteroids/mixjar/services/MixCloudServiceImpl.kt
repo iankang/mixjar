@@ -383,6 +383,39 @@ class MixCloudServiceImpl : MixCloudInterface {
         return userPlayListsResponseRx
     }
 
+    override fun getUserPlaylistCloudCasts(username: String, playlistSlug: String, page: Int): UserCloudCastResponse? {
+        val userPlaylistCloudCastsCall = mixCloudApi.getUserPlaylistsCloudcasts(username, playlistSlug, offset = 0)
+        var playlistCloudCastsResponse = UserCloudCastResponse()
+        userPlaylistCloudCastsCall.subscribe { playlistCloudCasts, throwable ->
+            if (throwable == null) {
+                playlistCloudCastsResponse = UserCloudCastResponse(playlistCloudCasts)
+            } else {
+                LOGGER?.error(throwable.localizedMessage)
+            }
+        }
+        return playlistCloudCastsResponse
+    }
+
+    override fun getUserPlaylistCloudCasts(
+        username: String, playlistSlug: String, limit: Int, page: Int
+    ): UserCloudCastResponse? {
+        val userPlaylistCloudCastsCall = mixCloudApi.getUserPlaylistsCloudcasts(
+            username,
+            playlistSlug,
+            limit = limit,
+            offset = getOffsetFromPage(page)!!
+        )
+        var playlistCloudCastsResponse = UserCloudCastResponse()
+        userPlaylistCloudCastsCall.subscribe { playlistCloudCasts, throwable ->
+            if (throwable == null) {
+                playlistCloudCastsResponse = UserCloudCastResponse(playlistCloudCasts)
+            } else {
+                LOGGER?.error(throwable.localizedMessage)
+            }
+        }
+        return playlistCloudCastsResponse
+    }
+
     override fun getTag(tag: String): TagResponse? {
         val tagCall = mixCloudApi.getTag(tag)
         var tagResponseRx: TagResponse? = TagResponse()

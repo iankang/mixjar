@@ -12,7 +12,7 @@ data class CityPopularResponse (
 		cityPopularResponse?.paging
 	)
 
-	constructor():this(cityPopularResponse = null)
+	constructor():this(cityPopularResponse = CityPopularResponse(null,null))
 }
 
 data class CityPopularResponseData (
